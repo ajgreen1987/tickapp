@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAB3D80E1AEDB820003DA43A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D80D1AEDB820003DA43A /* main.m */; };
+		DAB3D8111AEDB820003DA43A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8101AEDB820003DA43A /* AppDelegate.m */; };
+		DAB3D8141AEDB820003DA43A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8131AEDB820003DA43A /* ViewController.m */; };
+		DAB3D8171AEDB820003DA43A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB3D8151AEDB820003DA43A /* Main.storyboard */; };
+		DAB3D8191AEDB820003DA43A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB3D8181AEDB820003DA43A /* Images.xcassets */; };
+		DAB3D81C1AEDB820003DA43A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB3D81A1AEDB820003DA43A /* LaunchScreen.xib */; };
+		DAB3D8281AEDB820003DA43A /* TickTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8271AEDB820003DA43A /* TickTimeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAB3D8221AEDB820003DA43A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAB3D8001AEDB820003DA43A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAB3D8071AEDB820003DA43A;
+			remoteInfo = TickTime;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAB3D8081AEDB820003DA43A /* TickTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TickTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAB3D80C1AEDB820003DA43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAB3D80D1AEDB820003DA43A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAB3D80F1AEDB820003DA43A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DAB3D8101AEDB820003DA43A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DAB3D8121AEDB820003DA43A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DAB3D8131AEDB820003DA43A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DAB3D8161AEDB820003DA43A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAB3D8181AEDB820003DA43A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DAB3D81B1AEDB820003DA43A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DAB3D8211AEDB820003DA43A /* TickTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TickTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAB3D8261AEDB820003DA43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAB3D8271AEDB820003DA43A /* TickTimeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TickTimeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAB3D8051AEDB820003DA43A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAB3D81E1AEDB820003DA43A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAB3D7FF1AEDB820003DA43A = {
+			isa = PBXGroup;
+			children = (
+				DAB3D80A1AEDB820003DA43A /* TickTime */,
+				DAB3D8241AEDB820003DA43A /* TickTimeTests */,
+				DAB3D8091AEDB820003DA43A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAB3D8091AEDB820003DA43A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAB3D8081AEDB820003DA43A /* TickTime.app */,
+				DAB3D8211AEDB820003DA43A /* TickTimeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAB3D80A1AEDB820003DA43A /* TickTime */ = {
+			isa = PBXGroup;
+			children = (
+				DAB3D80F1AEDB820003DA43A /* AppDelegate.h */,
+				DAB3D8101AEDB820003DA43A /* AppDelegate.m */,
+				DAB3D8121AEDB820003DA43A /* ViewController.h */,
+				DAB3D8131AEDB820003DA43A /* ViewController.m */,
+				DAB3D8151AEDB820003DA43A /* Main.storyboard */,
+				DAB3D8181AEDB820003DA43A /* Images.xcassets */,
+				DAB3D81A1AEDB820003DA43A /* LaunchScreen.xib */,
+				DAB3D80B1AEDB820003DA43A /* Supporting Files */,
+			);
+			path = TickTime;
+			sourceTree = "<group>";
+		};
+		DAB3D80B1AEDB820003DA43A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAB3D80C1AEDB820003DA43A /* Info.plist */,
+				DAB3D80D1AEDB820003DA43A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAB3D8241AEDB820003DA43A /* TickTimeTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAB3D8271AEDB820003DA43A /* TickTimeTests.m */,
+				DAB3D8251AEDB820003DA43A /* Supporting Files */,
+			);
+			path = TickTimeTests;
+			sourceTree = "<group>";
+		};
+		DAB3D8251AEDB820003DA43A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAB3D8261AEDB820003DA43A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAB3D8071AEDB820003DA43A /* TickTime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAB3D82B1AEDB820003DA43A /* Build configuration list for PBXNativeTarget "TickTime" */;
+			buildPhases = (
+				DAB3D8041AEDB820003DA43A /* Sources */,
+				DAB3D8051AEDB820003DA43A /* Frameworks */,
+				DAB3D8061AEDB820003DA43A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TickTime;
+			productName = TickTime;
+			productReference = DAB3D8081AEDB820003DA43A /* TickTime.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAB3D8201AEDB820003DA43A /* TickTimeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAB3D82E1AEDB820003DA43A /* Build configuration list for PBXNativeTarget "TickTimeTests" */;
+			buildPhases = (
+				DAB3D81D1AEDB820003DA43A /* Sources */,
+				DAB3D81E1AEDB820003DA43A /* Frameworks */,
+				DAB3D81F1AEDB820003DA43A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAB3D8231AEDB820003DA43A /* PBXTargetDependency */,
+			);
+			name = TickTimeTests;
+			productName = TickTimeTests;
+			productReference = DAB3D8211AEDB820003DA43A /* TickTimeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAB3D8001AEDB820003DA43A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = TickTime;
+				TargetAttributes = {
+					DAB3D8071AEDB820003DA43A = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					DAB3D8201AEDB820003DA43A = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = DAB3D8071AEDB820003DA43A;
+					};
+				};
+			};
+			buildConfigurationList = DAB3D8031AEDB820003DA43A /* Build configuration list for PBXProject "TickTime" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAB3D7FF1AEDB820003DA43A;
+			productRefGroup = DAB3D8091AEDB820003DA43A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAB3D8071AEDB820003DA43A /* TickTime */,
+				DAB3D8201AEDB820003DA43A /* TickTimeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAB3D8061AEDB820003DA43A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB3D8171AEDB820003DA43A /* Main.storyboard in Resources */,
+				DAB3D81C1AEDB820003DA43A /* LaunchScreen.xib in Resources */,
+				DAB3D8191AEDB820003DA43A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAB3D81F1AEDB820003DA43A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAB3D8041AEDB820003DA43A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB3D8141AEDB820003DA43A /* ViewController.m in Sources */,
+				DAB3D8111AEDB820003DA43A /* AppDelegate.m in Sources */,
+				DAB3D80E1AEDB820003DA43A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAB3D81D1AEDB820003DA43A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB3D8281AEDB820003DA43A /* TickTimeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAB3D8231AEDB820003DA43A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAB3D8071AEDB820003DA43A /* TickTime */;
+			targetProxy = DAB3D8221AEDB820003DA43A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAB3D8151AEDB820003DA43A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAB3D8161AEDB820003DA43A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAB3D81A1AEDB820003DA43A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAB3D81B1AEDB820003DA43A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAB3D8291AEDB820003DA43A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DAB3D82A1AEDB820003DA43A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAB3D82C1AEDB820003DA43A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TickTime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DAB3D82D1AEDB820003DA43A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TickTime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DAB3D82F1AEDB820003DA43A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TickTimeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TickTime.app/TickTime";
+			};
+			name = Debug;
+		};
+		DAB3D8301AEDB820003DA43A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TickTimeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TickTime.app/TickTime";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAB3D8031AEDB820003DA43A /* Build configuration list for PBXProject "TickTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAB3D8291AEDB820003DA43A /* Debug */,
+				DAB3D82A1AEDB820003DA43A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAB3D82B1AEDB820003DA43A /* Build configuration list for PBXNativeTarget "TickTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAB3D82C1AEDB820003DA43A /* Debug */,
+				DAB3D82D1AEDB820003DA43A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DAB3D82E1AEDB820003DA43A /* Build configuration list for PBXNativeTarget "TickTimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAB3D82F1AEDB820003DA43A /* Debug */,
+				DAB3D8301AEDB820003DA43A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAB3D8001AEDB820003DA43A /* Project object */;
+}
