@@ -14,6 +14,8 @@
 		DAB3D8191AEDB820003DA43A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB3D8181AEDB820003DA43A /* Images.xcassets */; };
 		DAB3D81C1AEDB820003DA43A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB3D81A1AEDB820003DA43A /* LaunchScreen.xib */; };
 		DAB3D8281AEDB820003DA43A /* TickTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8271AEDB820003DA43A /* TickTimeTests.m */; };
+		DAB3D8331AEDBBE9003DA43A /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8321AEDBBE9003DA43A /* UIImage+animatedGIF.m */; };
+		DAB3D8351AEDBC14003DA43A /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = DAB3D8341AEDBC14003DA43A /* gif.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		DAB3D8211AEDB820003DA43A /* TickTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TickTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB3D8261AEDB820003DA43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAB3D8271AEDB820003DA43A /* TickTimeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TickTimeTests.m; sourceTree = "<group>"; };
+		DAB3D8311AEDBBE9003DA43A /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		DAB3D8321AEDBBE9003DA43A /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		DAB3D8341AEDBC14003DA43A /* gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,9 @@
 		DAB3D80A1AEDB820003DA43A /* TickTime */ = {
 			isa = PBXGroup;
 			children = (
+				DAB3D8341AEDBC14003DA43A /* gif.gif */,
+				DAB3D8311AEDBBE9003DA43A /* UIImage+animatedGIF.h */,
+				DAB3D8321AEDBBE9003DA43A /* UIImage+animatedGIF.m */,
 				DAB3D80F1AEDB820003DA43A /* AppDelegate.h */,
 				DAB3D8101AEDB820003DA43A /* AppDelegate.m */,
 				DAB3D8121AEDB820003DA43A /* ViewController.h */,
@@ -200,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAB3D8171AEDB820003DA43A /* Main.storyboard in Resources */,
+				DAB3D8351AEDBC14003DA43A /* gif.gif in Resources */,
 				DAB3D81C1AEDB820003DA43A /* LaunchScreen.xib in Resources */,
 				DAB3D8191AEDB820003DA43A /* Images.xcassets in Resources */,
 			);
@@ -220,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAB3D8141AEDB820003DA43A /* ViewController.m in Sources */,
+				DAB3D8331AEDBBE9003DA43A /* UIImage+animatedGIF.m in Sources */,
 				DAB3D8111AEDB820003DA43A /* AppDelegate.m in Sources */,
 				DAB3D80E1AEDB820003DA43A /* main.m in Sources */,
 			);
