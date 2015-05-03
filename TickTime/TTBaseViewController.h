@@ -1,5 +1,5 @@
 //
-//  TTInstructionsViewController.h
+//  TTBaseViewController.h
 //  TickTime
 //
 //  Created by AJ Green on 5/3/15.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TTBaseViewController.h"
 
-@interface TTInstructionsViewController : TTBaseViewController
+@interface TTBaseViewController : UIViewController
 
 @end

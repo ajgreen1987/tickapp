@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DA8C0C271AF6A1EC004B61F5 /* TTInstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C0C261AF6A1EC004B61F5 /* TTInstructionsViewController.m */; };
+		DA8C0C2C1AF6AB31004B61F5 /* TTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C0C2B1AF6AB31004B61F5 /* TTSettingsViewController.m */; };
+		DA8C0C2F1AF6AF96004B61F5 /* TTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C0C2E1AF6AF96004B61F5 /* TTBaseViewController.m */; };
+		DA8C0C321AF6B3A4004B61F5 /* TTResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C0C311AF6B3A4004B61F5 /* TTResourcesViewController.m */; };
 		DAB3D80E1AEDB820003DA43A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D80D1AEDB820003DA43A /* main.m */; };
 		DAB3D8111AEDB820003DA43A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8101AEDB820003DA43A /* AppDelegate.m */; };
 		DAB3D8141AEDB820003DA43A /* TTLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8131AEDB820003DA43A /* TTLandingViewController.m */; };
@@ -32,6 +35,12 @@
 /* Begin PBXFileReference section */
 		DA8C0C251AF6A1EC004B61F5 /* TTInstructionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTInstructionsViewController.h; sourceTree = "<group>"; };
 		DA8C0C261AF6A1EC004B61F5 /* TTInstructionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTInstructionsViewController.m; sourceTree = "<group>"; };
+		DA8C0C2A1AF6AB31004B61F5 /* TTSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSettingsViewController.h; sourceTree = "<group>"; };
+		DA8C0C2B1AF6AB31004B61F5 /* TTSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSettingsViewController.m; sourceTree = "<group>"; };
+		DA8C0C2D1AF6AF96004B61F5 /* TTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBaseViewController.h; sourceTree = "<group>"; };
+		DA8C0C2E1AF6AF96004B61F5 /* TTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseViewController.m; sourceTree = "<group>"; };
+		DA8C0C301AF6B3A4004B61F5 /* TTResourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTResourcesViewController.h; sourceTree = "<group>"; };
+		DA8C0C311AF6B3A4004B61F5 /* TTResourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTResourcesViewController.m; sourceTree = "<group>"; };
 		DAB3D8081AEDB820003DA43A /* TickTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TickTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB3D80C1AEDB820003DA43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAB3D80D1AEDB820003DA43A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,6 +77,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA8C0C281AF6AB14004B61F5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA8C0C251AF6A1EC004B61F5 /* TTInstructionsViewController.h */,
+				DA8C0C261AF6A1EC004B61F5 /* TTInstructionsViewController.m */,
+				DAB3D8121AEDB820003DA43A /* TTLandingViewController.h */,
+				DAB3D8131AEDB820003DA43A /* TTLandingViewController.m */,
+				DA8C0C2A1AF6AB31004B61F5 /* TTSettingsViewController.h */,
+				DA8C0C2B1AF6AB31004B61F5 /* TTSettingsViewController.m */,
+				DA8C0C2D1AF6AF96004B61F5 /* TTBaseViewController.h */,
+				DA8C0C2E1AF6AF96004B61F5 /* TTBaseViewController.m */,
+				DA8C0C301AF6B3A4004B61F5 /* TTResourcesViewController.h */,
+				DA8C0C311AF6B3A4004B61F5 /* TTResourcesViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DA8C0C291AF6AB1D004B61F5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DAB3D8311AEDBBE9003DA43A /* UIImage+animatedGIF.h */,
+				DAB3D8321AEDBBE9003DA43A /* UIImage+animatedGIF.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		DAB3D7FF1AEDB820003DA43A = {
 			isa = PBXGroup;
 			children = (
@@ -89,19 +124,15 @@
 		DAB3D80A1AEDB820003DA43A /* TickTime */ = {
 			isa = PBXGroup;
 			children = (
+				DA8C0C291AF6AB1D004B61F5 /* Categories */,
+				DA8C0C281AF6AB14004B61F5 /* View Controllers */,
 				DAB3D8341AEDBC14003DA43A /* gif.gif */,
-				DAB3D8311AEDBBE9003DA43A /* UIImage+animatedGIF.h */,
-				DAB3D8321AEDBBE9003DA43A /* UIImage+animatedGIF.m */,
 				DAB3D80F1AEDB820003DA43A /* AppDelegate.h */,
 				DAB3D8101AEDB820003DA43A /* AppDelegate.m */,
-				DAB3D8121AEDB820003DA43A /* TTLandingViewController.h */,
-				DAB3D8131AEDB820003DA43A /* TTLandingViewController.m */,
 				DAB3D8151AEDB820003DA43A /* Main.storyboard */,
 				DAB3D8181AEDB820003DA43A /* Images.xcassets */,
 				DAB3D81A1AEDB820003DA43A /* LaunchScreen.xib */,
 				DAB3D80B1AEDB820003DA43A /* Supporting Files */,
-				DA8C0C251AF6A1EC004B61F5 /* TTInstructionsViewController.h */,
-				DA8C0C261AF6A1EC004B61F5 /* TTInstructionsViewController.m */,
 			);
 			path = TickTime;
 			sourceTree = "<group>";
@@ -233,11 +264,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8C0C321AF6B3A4004B61F5 /* TTResourcesViewController.m in Sources */,
 				DAB3D8141AEDB820003DA43A /* TTLandingViewController.m in Sources */,
 				DAB3D8331AEDBBE9003DA43A /* UIImage+animatedGIF.m in Sources */,
 				DAB3D8111AEDB820003DA43A /* AppDelegate.m in Sources */,
 				DAB3D80E1AEDB820003DA43A /* main.m in Sources */,
 				DA8C0C271AF6A1EC004B61F5 /* TTInstructionsViewController.m in Sources */,
+				DA8C0C2F1AF6AF96004B61F5 /* TTBaseViewController.m in Sources */,
+				DA8C0C2C1AF6AB31004B61F5 /* TTSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
