@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA8C0C271AF6A1EC004B61F5 /* TTInstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C0C261AF6A1EC004B61F5 /* TTInstructionsViewController.m */; };
 		DAB3D80E1AEDB820003DA43A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D80D1AEDB820003DA43A /* main.m */; };
 		DAB3D8111AEDB820003DA43A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8101AEDB820003DA43A /* AppDelegate.m */; };
-		DAB3D8141AEDB820003DA43A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8131AEDB820003DA43A /* ViewController.m */; };
+		DAB3D8141AEDB820003DA43A /* TTLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8131AEDB820003DA43A /* TTLandingViewController.m */; };
 		DAB3D8171AEDB820003DA43A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB3D8151AEDB820003DA43A /* Main.storyboard */; };
 		DAB3D8191AEDB820003DA43A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB3D8181AEDB820003DA43A /* Images.xcassets */; };
 		DAB3D81C1AEDB820003DA43A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB3D81A1AEDB820003DA43A /* LaunchScreen.xib */; };
@@ -29,13 +30,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA8C0C251AF6A1EC004B61F5 /* TTInstructionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTInstructionsViewController.h; sourceTree = "<group>"; };
+		DA8C0C261AF6A1EC004B61F5 /* TTInstructionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTInstructionsViewController.m; sourceTree = "<group>"; };
 		DAB3D8081AEDB820003DA43A /* TickTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TickTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB3D80C1AEDB820003DA43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAB3D80D1AEDB820003DA43A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAB3D80F1AEDB820003DA43A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DAB3D8101AEDB820003DA43A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DAB3D8121AEDB820003DA43A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DAB3D8131AEDB820003DA43A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DAB3D8121AEDB820003DA43A /* TTLandingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTLandingViewController.h; sourceTree = "<group>"; };
+		DAB3D8131AEDB820003DA43A /* TTLandingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTLandingViewController.m; sourceTree = "<group>"; };
 		DAB3D8161AEDB820003DA43A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAB3D8181AEDB820003DA43A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DAB3D81B1AEDB820003DA43A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -91,12 +94,14 @@
 				DAB3D8321AEDBBE9003DA43A /* UIImage+animatedGIF.m */,
 				DAB3D80F1AEDB820003DA43A /* AppDelegate.h */,
 				DAB3D8101AEDB820003DA43A /* AppDelegate.m */,
-				DAB3D8121AEDB820003DA43A /* ViewController.h */,
-				DAB3D8131AEDB820003DA43A /* ViewController.m */,
+				DAB3D8121AEDB820003DA43A /* TTLandingViewController.h */,
+				DAB3D8131AEDB820003DA43A /* TTLandingViewController.m */,
 				DAB3D8151AEDB820003DA43A /* Main.storyboard */,
 				DAB3D8181AEDB820003DA43A /* Images.xcassets */,
 				DAB3D81A1AEDB820003DA43A /* LaunchScreen.xib */,
 				DAB3D80B1AEDB820003DA43A /* Supporting Files */,
+				DA8C0C251AF6A1EC004B61F5 /* TTInstructionsViewController.h */,
+				DA8C0C261AF6A1EC004B61F5 /* TTInstructionsViewController.m */,
 			);
 			path = TickTime;
 			sourceTree = "<group>";
@@ -228,10 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAB3D8141AEDB820003DA43A /* ViewController.m in Sources */,
+				DAB3D8141AEDB820003DA43A /* TTLandingViewController.m in Sources */,
 				DAB3D8331AEDBBE9003DA43A /* UIImage+animatedGIF.m in Sources */,
 				DAB3D8111AEDB820003DA43A /* AppDelegate.m in Sources */,
 				DAB3D80E1AEDB820003DA43A /* main.m in Sources */,
+				DA8C0C271AF6A1EC004B61F5 /* TTInstructionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +432,7 @@
 				DAB3D82D1AEDB820003DA43A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAB3D82E1AEDB820003DA43A /* Build configuration list for PBXNativeTarget "TickTimeTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +441,7 @@
 				DAB3D8301AEDB820003DA43A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

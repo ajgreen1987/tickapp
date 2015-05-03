@@ -16,7 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    // Hide Status Bar
+    [application setStatusBarHidden:YES];
+    
     return YES;
 }
 
