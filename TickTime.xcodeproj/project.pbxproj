@@ -11,6 +11,9 @@
 		DA8C0C2C1AF6AB31004B61F5 /* TTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C0C2B1AF6AB31004B61F5 /* TTSettingsViewController.m */; };
 		DA8C0C2F1AF6AF96004B61F5 /* TTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C0C2E1AF6AF96004B61F5 /* TTBaseViewController.m */; };
 		DA8C0C321AF6B3A4004B61F5 /* TTResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C0C311AF6B3A4004B61F5 /* TTResourcesViewController.m */; };
+		DAAF53291AF846F20041673F /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAF53281AF846F20041673F /* UIImage+FixOrientation.m */; };
+		DAAF532D1AF847060041673F /* LLSimpleCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAF532C1AF847060041673F /* LLSimpleCamera.m */; };
+		DAAF53301AF847320041673F /* TTTickCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAF532F1AF847320041673F /* TTTickCheckViewController.m */; };
 		DAB3D80E1AEDB820003DA43A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D80D1AEDB820003DA43A /* main.m */; };
 		DAB3D8111AEDB820003DA43A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8101AEDB820003DA43A /* AppDelegate.m */; };
 		DAB3D8141AEDB820003DA43A /* TTLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8131AEDB820003DA43A /* TTLandingViewController.m */; };
@@ -41,6 +44,12 @@
 		DA8C0C2E1AF6AF96004B61F5 /* TTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseViewController.m; sourceTree = "<group>"; };
 		DA8C0C301AF6B3A4004B61F5 /* TTResourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTResourcesViewController.h; sourceTree = "<group>"; };
 		DA8C0C311AF6B3A4004B61F5 /* TTResourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTResourcesViewController.m; sourceTree = "<group>"; };
+		DAAF53271AF846F20041673F /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
+		DAAF53281AF846F20041673F /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
+		DAAF532B1AF847060041673F /* LLSimpleCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLSimpleCamera.h; sourceTree = "<group>"; };
+		DAAF532C1AF847060041673F /* LLSimpleCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSimpleCamera.m; sourceTree = "<group>"; };
+		DAAF532E1AF847320041673F /* TTTickCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTickCheckViewController.h; sourceTree = "<group>"; };
+		DAAF532F1AF847320041673F /* TTTickCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTickCheckViewController.m; sourceTree = "<group>"; };
 		DAB3D8081AEDB820003DA43A /* TickTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TickTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB3D80C1AEDB820003DA43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAB3D80D1AEDB820003DA43A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,6 +99,8 @@
 				DA8C0C2E1AF6AF96004B61F5 /* TTBaseViewController.m */,
 				DA8C0C301AF6B3A4004B61F5 /* TTResourcesViewController.h */,
 				DA8C0C311AF6B3A4004B61F5 /* TTResourcesViewController.m */,
+				DAAF532E1AF847320041673F /* TTTickCheckViewController.h */,
+				DAAF532F1AF847320041673F /* TTTickCheckViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -97,10 +108,21 @@
 		DA8C0C291AF6AB1D004B61F5 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				DAAF53271AF846F20041673F /* UIImage+FixOrientation.h */,
+				DAAF53281AF846F20041673F /* UIImage+FixOrientation.m */,
 				DAB3D8311AEDBBE9003DA43A /* UIImage+animatedGIF.h */,
 				DAB3D8321AEDBBE9003DA43A /* UIImage+animatedGIF.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		DAAF532A1AF846FC0041673F /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				DAAF532B1AF847060041673F /* LLSimpleCamera.h */,
+				DAAF532C1AF847060041673F /* LLSimpleCamera.m */,
+			);
+			name = "Third Party";
 			sourceTree = "<group>";
 		};
 		DAB3D7FF1AEDB820003DA43A = {
@@ -124,6 +146,7 @@
 		DAB3D80A1AEDB820003DA43A /* TickTime */ = {
 			isa = PBXGroup;
 			children = (
+				DAAF532A1AF846FC0041673F /* Third Party */,
 				DA8C0C291AF6AB1D004B61F5 /* Categories */,
 				DA8C0C281AF6AB14004B61F5 /* View Controllers */,
 				DAB3D8341AEDBC14003DA43A /* gif.gif */,
@@ -264,9 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAAF532D1AF847060041673F /* LLSimpleCamera.m in Sources */,
 				DA8C0C321AF6B3A4004B61F5 /* TTResourcesViewController.m in Sources */,
+				DAAF53291AF846F20041673F /* UIImage+FixOrientation.m in Sources */,
 				DAB3D8141AEDB820003DA43A /* TTLandingViewController.m in Sources */,
 				DAB3D8331AEDBBE9003DA43A /* UIImage+animatedGIF.m in Sources */,
+				DAAF53301AF847320041673F /* TTTickCheckViewController.m in Sources */,
 				DAB3D8111AEDB820003DA43A /* AppDelegate.m in Sources */,
 				DAB3D80E1AEDB820003DA43A /* main.m in Sources */,
 				DA8C0C271AF6A1EC004B61F5 /* TTInstructionsViewController.m in Sources */,
