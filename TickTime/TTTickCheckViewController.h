@@ -10,5 +10,4 @@
 
 @interface TTTickCheckViewController : LLSimpleCamera
 
-
 @end

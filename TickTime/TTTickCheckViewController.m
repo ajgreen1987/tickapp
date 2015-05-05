@@ -7,6 +7,7 @@
 //
 
 #import "TTTickCheckViewController.h"
+#import "MZTimerLabel.h"
 
 @interface TTTickCheckViewController ()
 
@@ -29,6 +30,8 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     [[self view] addSubview:[self snapButton]];
+    [[self view] addSubview:[self cancelButton]];
+    [self setupTimerLabel];
     
     [self turnOnTorch];
 }
@@ -62,6 +65,26 @@
     return snapButton;
 }
 
+- (UIButton*) cancelButton
+{
+    // snap button to capture image
+    UIButton *snapButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    snapButton.frame = CGRectMake(self.view.frame.origin.x + 8.0f,
+                                  self.view.frame.origin.y + 8.0f,
+                                  70.0f,
+                                  44.0f);
+    snapButton.clipsToBounds = YES;
+    [snapButton setTitleColor:[UIColor whiteColor]
+                     forState:UIControlStateNormal];
+    [snapButton setTitle:@"Cancel"
+                forState:UIControlStateNormal];
+    [snapButton addTarget:self
+                   action:@selector(cancelTouched:)
+         forControlEvents:UIControlEventTouchUpInside];
+    
+    return snapButton;
+}
+
 - (void)snapButtonPressed:(UIButton *)button {
     
     // capture
@@ -79,6 +102,27 @@
             NSLog(@"An error has occured: %@", error);
         }
     } exactSeenImage:YES];
+}
+
+- (void) cancelTouched:(UIButton*) button
+{
+    [self dismissViewControllerAnimated:YES
+                             completion:nil];
+}
+
+- (void) setupTimerLabel
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 100.0f,
+                                                               self.view.frame.size.height - (40.0f+(40.0f*0.5f)),
+                                                               100.0f,
+                                                               40.0f)];
+    [label setTextColor:[UIColor whiteColor]];
+    [[self view] addSubview:label];
+    
+    MZTimerLabel *timer = [[MZTimerLabel alloc] initWithLabel:label
+                                                 andTimerType:MZTimerLabelTypeTimer];
+    [timer setCountDownTime:60];
+    [timer start];
 }
 
 
