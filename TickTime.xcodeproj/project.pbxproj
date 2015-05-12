@@ -24,6 +24,7 @@
 		DAB3D8281AEDB820003DA43A /* TickTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8271AEDB820003DA43A /* TickTimeTests.m */; };
 		DAB3D8331AEDBBE9003DA43A /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8321AEDBBE9003DA43A /* UIImage+animatedGIF.m */; };
 		DAB3D8351AEDBC14003DA43A /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = DAB3D8341AEDBC14003DA43A /* gif.gif */; };
+		DAC9EEBC1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC9EEBB1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		DAB3D8311AEDBBE9003DA43A /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		DAB3D8321AEDBBE9003DA43A /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 		DAB3D8341AEDBC14003DA43A /* gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif.gif; sourceTree = "<group>"; };
+		DAC9EEBA1B01A6D400E3B730 /* TTBaseMenuBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBaseMenuBackgroundView.h; sourceTree = "<group>"; };
+		DAC9EEBB1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseMenuBackgroundView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 				DA8C0C311AF6B3A4004B61F5 /* TTResourcesViewController.m */,
 				DAAF532E1AF847320041673F /* TTTickCheckViewController.h */,
 				DAAF532F1AF847320041673F /* TTTickCheckViewController.m */,
+				DAC9EEBA1B01A6D400E3B730 /* TTBaseMenuBackgroundView.h */,
+				DAC9EEBB1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				DAAF53291AF846F20041673F /* UIImage+FixOrientation.m in Sources */,
 				DAB3D8141AEDB820003DA43A /* TTLandingViewController.m in Sources */,
 				DAB3D8331AEDBBE9003DA43A /* UIImage+animatedGIF.m in Sources */,
+				DAC9EEBC1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m in Sources */,
 				DAAF53301AF847320041673F /* TTTickCheckViewController.m in Sources */,
 				DAB3D8111AEDB820003DA43A /* AppDelegate.m in Sources */,
 				DAB3D80E1AEDB820003DA43A /* main.m in Sources */,
