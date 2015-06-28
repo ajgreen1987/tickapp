@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
++ (UIFont*) systemFontOfSize:(CGFloat)aSize;
 
 @end
 

@@ -26,6 +26,10 @@
 		DAB3D8351AEDBC14003DA43A /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = DAB3D8341AEDBC14003DA43A /* gif.gif */; };
 		DAC9EEBC1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC9EEBB1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m */; };
 		DAF1AE5F1B3F9E290071F3C7 /* TTTimePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF1AE5E1B3F9E290071F3C7 /* TTTimePickerViewController.m */; };
+		DAF1AE661B3FA30D0071F3C7 /* TTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF1AE651B3FA30D0071F3C7 /* TTButton.m */; };
+		DAF1AE681B3FA5DF0071F3C7 /* Quicksand-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAF1AE671B3FA5DF0071F3C7 /* Quicksand-Light.otf */; };
+		DAF1AE6A1B3FAEBB0071F3C7 /* Quicksand-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAF1AE691B3FAEBB0071F3C7 /* Quicksand-Bold.otf */; };
+		DAF1AE6D1B3FAF1B0071F3C7 /* TTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF1AE6C1B3FAF1B0071F3C7 /* TTLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,12 @@
 		DAC9EEBB1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseMenuBackgroundView.m; sourceTree = "<group>"; };
 		DAF1AE5D1B3F9E290071F3C7 /* TTTimePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTimePickerViewController.h; sourceTree = "<group>"; };
 		DAF1AE5E1B3F9E290071F3C7 /* TTTimePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTimePickerViewController.m; sourceTree = "<group>"; };
+		DAF1AE641B3FA30D0071F3C7 /* TTButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTButton.h; sourceTree = "<group>"; };
+		DAF1AE651B3FA30D0071F3C7 /* TTButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTButton.m; sourceTree = "<group>"; };
+		DAF1AE671B3FA5DF0071F3C7 /* Quicksand-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.otf"; sourceTree = "<group>"; };
+		DAF1AE691B3FAEBB0071F3C7 /* Quicksand-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.otf"; sourceTree = "<group>"; };
+		DAF1AE6B1B3FAF1B0071F3C7 /* TTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLabel.h; sourceTree = "<group>"; };
+		DAF1AE6C1B3FAF1B0071F3C7 /* TTLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +146,10 @@
 				DAAF53321AF857440041673F /* MZTimerLabel.m */,
 				DAAF532B1AF847060041673F /* LLSimpleCamera.h */,
 				DAAF532C1AF847060041673F /* LLSimpleCamera.m */,
+				DAF1AE641B3FA30D0071F3C7 /* TTButton.h */,
+				DAF1AE651B3FA30D0071F3C7 /* TTButton.m */,
+				DAF1AE6B1B3FAF1B0071F3C7 /* TTLabel.h */,
+				DAF1AE6C1B3FAF1B0071F3C7 /* TTLabel.m */,
 			);
 			name = "Third Party";
 			sourceTree = "<group>";
@@ -178,6 +192,8 @@
 		DAB3D80B1AEDB820003DA43A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DAF1AE691B3FAEBB0071F3C7 /* Quicksand-Bold.otf */,
+				DAF1AE671B3FA5DF0071F3C7 /* Quicksand-Light.otf */,
 				DAB3D80C1AEDB820003DA43A /* Info.plist */,
 				DAB3D80D1AEDB820003DA43A /* main.m */,
 			);
@@ -281,10 +297,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF1AE6A1B3FAEBB0071F3C7 /* Quicksand-Bold.otf in Resources */,
 				DAB3D8171AEDB820003DA43A /* Main.storyboard in Resources */,
 				DAB3D8351AEDBC14003DA43A /* gif.gif in Resources */,
 				DAB3D81C1AEDB820003DA43A /* LaunchScreen.xib in Resources */,
 				DAB3D8191AEDB820003DA43A /* Images.xcassets in Resources */,
+				DAF1AE681B3FA5DF0071F3C7 /* Quicksand-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,9 +328,11 @@
 				DAB3D8331AEDBBE9003DA43A /* UIImage+animatedGIF.m in Sources */,
 				DAC9EEBC1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m in Sources */,
 				DAAF53301AF847320041673F /* TTTickCheckViewController.m in Sources */,
+				DAF1AE661B3FA30D0071F3C7 /* TTButton.m in Sources */,
 				DAB3D8111AEDB820003DA43A /* AppDelegate.m in Sources */,
 				DAB3D80E1AEDB820003DA43A /* main.m in Sources */,
 				DA8C0C271AF6A1EC004B61F5 /* TTInstructionsViewController.m in Sources */,
+				DAF1AE6D1B3FAF1B0071F3C7 /* TTLabel.m in Sources */,
 				DA8C0C2F1AF6AF96004B61F5 /* TTBaseViewController.m in Sources */,
 				DA8C0C2C1AF6AB31004B61F5 /* TTSettingsViewController.m in Sources */,
 				DAF1AE5F1B3F9E290071F3C7 /* TTTimePickerViewController.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "TTBaseViewController.h"
+#import "TTButton.h"
 
 @interface TTBaseViewController ()
 
@@ -40,10 +41,8 @@
 /**
  This method creates a button and places it at the bottom center of the page. It's singular purpose is to pop the navigation controller to root. If there is no navigation controller then this method is useless.
  */
-- (UIButton*) bottomHomeButton
+- (TTButton*) bottomHomeButton
 {
-    UIButton *home = [UIButton buttonWithType:UIButtonTypeCustom];
-    
     NSString *homeTitle = @"Home";
     CGFloat xOrigin = 0.0f;
     CGFloat yOrigin = 0.0f;
@@ -51,13 +50,9 @@
     CGFloat width = 140.0f;
     CGFloat selfViewHeight = self.view.frame.size.height;
 
-    [home setBackgroundColor:[UIColor colorWithRed:(247.0f/255.0f)
-                                             green:(143.0f/255.0f)
-                                              blue:0.0f
-                                             alpha:1.0f]];
+    TTButton *home = [[TTButton alloc] initWithFrame:CGRectMake(xOrigin, yOrigin, width, height)];
     
     [home setTitle:homeTitle forState:UIControlStateNormal];
-    [home setFrame:CGRectMake(xOrigin, yOrigin, width, height)];
     [home setCenter:CGPointMake(self.view.center.x, (selfViewHeight - height))];
     
     if (self.navigationController != nil)
