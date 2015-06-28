@@ -8,6 +8,7 @@
 
 #import "TTTickCheckViewController.h"
 #import "MZTimerLabel.h"
+#import "AppDelegate.h"
 
 @interface TTTickCheckViewController ()
 
@@ -112,6 +113,8 @@
 
 - (void) setupTimerLabel
 {
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 100.0f,
                                                                self.view.frame.size.height - (40.0f+(40.0f*0.5f)),
                                                                100.0f,
@@ -121,7 +124,7 @@
     
     MZTimerLabel *timer = [[MZTimerLabel alloc] initWithLabel:label
                                                  andTimerType:MZTimerLabelTypeTimer];
-    [timer setCountDownTime:60];
+    [timer setCountDownTime:appDelegate.countdownTimer];
     [timer start];
 }
 

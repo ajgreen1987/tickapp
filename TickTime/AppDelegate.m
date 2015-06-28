@@ -20,6 +20,7 @@
     // Hide Status Bar
     [application setStatusBarHidden:YES];
     
+    [self setCountdownTimer:60];
     [[UISegmentedControl appearance] setTitleTextAttributes:@{NSFontAttributeName:[AppDelegate systemFontOfSize:12.0f]}
                                                    forState:UIControlStateNormal];
     

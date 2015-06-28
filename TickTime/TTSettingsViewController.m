@@ -7,6 +7,7 @@
 //
 
 #import "TTSettingsViewController.h"
+#import "AppDelegate.h"
 
 
 @interface TTSettingsViewController ()
@@ -56,6 +57,35 @@
     
     [self.timePicker setTitle:[formatter stringFromDate:aTime]
                      forState:UIControlStateNormal];
+}
+
+- (IBAction)handleCountdownTimerValueChanged:(id)sender
+{
+    UISlider *slider = (UISlider*)sender;
+    NSInteger value = slider.value;
+    
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    [appDelegate setCountdownTimer:value];
+}
+
+- (IBAction)handleMusicSwitchValueChanged:(id)sender
+{
+    UISwitch *music = (UISwitch*)sender;
+    BOOL isOn = music.isOn;
+    
+    if (isOn)
+    {
+        [self performSegueWithIdentifier:@"SongSelector"
+                                  sender:self];
+    }
+    
+}
+
+- (IBAction)handleTwitterSwitchValueChanged:(id)sender {
+}
+
+- (IBAction)handleFacebookSwitchValueChanged:(id)sender {
 }
 
 @end

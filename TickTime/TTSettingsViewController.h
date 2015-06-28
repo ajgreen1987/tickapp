@@ -12,8 +12,15 @@
 
 @interface TTSettingsViewController : TTBaseViewController <UIActionSheetDelegate, TimePickerVCDelegate>
 
-- (IBAction)handleTimeTouchUpInside:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UIButton *timePicker;
+
+- (IBAction)handleTimeTouchUpInside:(id)sender;
+- (IBAction)handleCountdownTimerValueChanged:(id)sender;
+- (IBAction)handleMusicSwitchValueChanged:(id)sender;
+- (IBAction)handleTwitterSwitchValueChanged:(id)sender;
+- (IBAction)handleFacebookSwitchValueChanged:(id)sender;
+
 
 @end
 

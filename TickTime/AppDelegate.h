@@ -11,6 +11,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, assign) NSInteger countdownTimer;
 
 + (UIFont*) systemFontOfSize:(CGFloat)aSize;
 + (void) openURL:(NSURL*)aURL;
