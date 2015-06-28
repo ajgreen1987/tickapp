@@ -20,6 +20,9 @@
     // Hide Status Bar
     [application setStatusBarHidden:YES];
     
+    [[UISegmentedControl appearance] setTitleTextAttributes:@{NSFontAttributeName:[AppDelegate systemFontOfSize:12.0f]}
+                                                   forState:UIControlStateNormal];
+    
     return YES;
 }
 
@@ -52,6 +55,14 @@
 {
     return [UIFont fontWithName:@"Quicksand-Light"
                            size:aSize];
+}
+
++ (void) openURL:(NSURL *)aURL
+{
+    if ([[UIApplication sharedApplication] canOpenURL:aURL])
+    {
+        [[UIApplication sharedApplication] openURL:aURL];
+    }
 }
 
 @end

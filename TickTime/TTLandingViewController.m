@@ -8,6 +8,7 @@
 
 #import "TTLandingViewController.h"
 #import "UIImage+animatedGIF.h"
+#import "AppDelegate.h"
 
 #define LAST_FRAME                      @"lastFrame"
 #define GIF                             @"gif"
@@ -184,4 +185,14 @@
     
 }
 
+#pragma mark - Social
+- (IBAction)handleFacebookTouchUpInside:(id)sender
+{
+    [AppDelegate openURL:[NSURL URLWithString:@"https://www.facebook.com/ticktimeapp"]];
+}
+
+- (IBAction)handleTwitterTouchUpInside:(id)sender
+{
+    [AppDelegate openURL:[NSURL URLWithString:@"https://www.twitter.com/ticktimeapp"]];
+}
 @end

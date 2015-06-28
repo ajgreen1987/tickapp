@@ -19,5 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *facebook;
 @property (weak, nonatomic) IBOutlet UIButton *twitter;
 
+- (IBAction)handleFacebookTouchUpInside:(id)sender;
+- (IBAction)handleTwitterTouchUpInside:(id)sender;
 @end
 

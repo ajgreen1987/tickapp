@@ -13,6 +13,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 + (UIFont*) systemFontOfSize:(CGFloat)aSize;
++ (void) openURL:(NSURL*)aURL;
 
 @end
 

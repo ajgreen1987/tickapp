@@ -129,6 +129,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleFacebookTouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ura-29-tkY"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zi-1X-8kd">
                                 <rect key="frame" x="272" y="0.0" width="32" height="59"/>
@@ -140,6 +143,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleTwitterTouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Y5k-Tm-GMI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -305,6 +311,9 @@ consult with appropriate health professionals on any matter relating to their he
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleTickFactsTouchUpInside:" destination="ytk-5o-lYU" eventType="touchUpInside" id="eM7-om-B7R"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8c-Jv-TMl" customClass="TTButton">
                                 <rect key="frame" x="91" y="248" width="138" height="45"/>
@@ -316,6 +325,9 @@ consult with appropriate health professionals on any matter relating to their he
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleCDCTouchUpInside:" destination="ytk-5o-lYU" eventType="touchUpInside" id="mA9-qf-Iso"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resources" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5Y-dl-Gd2" customClass="TTLabel">
                                 <rect key="frame" x="16" y="41" width="191" height="40"/>
@@ -333,6 +345,9 @@ consult with appropriate health professionals on any matter relating to their he
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleTickProductsTouchUpInside:" destination="ytk-5o-lYU" eventType="touchUpInside" id="jdD-1s-5K5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
