@@ -32,6 +32,9 @@
 		DAF1AE6D1B3FAF1B0071F3C7 /* TTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF1AE6C1B3FAF1B0071F3C7 /* TTLabel.m */; };
 		DAF1AE6F1B40A4C20071F3C7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF1AE6E1B40A4C20071F3C7 /* MediaPlayer.framework */; };
 		DAF1AE721B40A63D0071F3C7 /* TTMusicSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF1AE711B40A63D0071F3C7 /* TTMusicSelectorViewController.m */; };
+		DAF1AE751B40BBC60071F3C7 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF1AE741B40BBC60071F3C7 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
+		DAF1AE771B40BBDF0071F3C7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF1AE761B40BBDF0071F3C7 /* AssetsLibrary.framework */; };
+		DAF1AE7A1B40BCD10071F3C7 /* TTImagePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF1AE791B40BCD10071F3C7 /* TTImagePreviewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,11 @@
 		DAF1AE6E1B40A4C20071F3C7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		DAF1AE701B40A63D0071F3C7 /* TTMusicSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMusicSelectorViewController.h; sourceTree = "<group>"; };
 		DAF1AE711B40A63D0071F3C7 /* TTMusicSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMusicSelectorViewController.m; sourceTree = "<group>"; };
+		DAF1AE731B40BBC60071F3C7 /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
+		DAF1AE741B40BBC60071F3C7 /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
+		DAF1AE761B40BBDF0071F3C7 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		DAF1AE781B40BCD10071F3C7 /* TTImagePreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTImagePreviewViewController.h; sourceTree = "<group>"; };
+		DAF1AE791B40BCD10071F3C7 /* TTImagePreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTImagePreviewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF1AE771B40BBDF0071F3C7 /* AssetsLibrary.framework in Frameworks */,
 				DAF1AE6F1B40A4C20071F3C7 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +141,8 @@
 				DAF1AE5E1B3F9E290071F3C7 /* TTTimePickerViewController.m */,
 				DAF1AE701B40A63D0071F3C7 /* TTMusicSelectorViewController.h */,
 				DAF1AE711B40A63D0071F3C7 /* TTMusicSelectorViewController.m */,
+				DAF1AE781B40BCD10071F3C7 /* TTImagePreviewViewController.h */,
+				DAF1AE791B40BCD10071F3C7 /* TTImagePreviewViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -139,6 +150,8 @@
 		DA8C0C291AF6AB1D004B61F5 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				DAF1AE731B40BBC60071F3C7 /* ALAssetsLibrary+CustomPhotoAlbum.h */,
+				DAF1AE741B40BBC60071F3C7 /* ALAssetsLibrary+CustomPhotoAlbum.m */,
 				DAAF53271AF846F20041673F /* UIImage+FixOrientation.h */,
 				DAAF53281AF846F20041673F /* UIImage+FixOrientation.m */,
 				DAB3D8311AEDBBE9003DA43A /* UIImage+animatedGIF.h */,
@@ -165,6 +178,7 @@
 		DAB3D7FF1AEDB820003DA43A = {
 			isa = PBXGroup;
 			children = (
+				DAF1AE761B40BBDF0071F3C7 /* AssetsLibrary.framework */,
 				DAF1AE6E1B40A4C20071F3C7 /* MediaPlayer.framework */,
 				DAB3D80A1AEDB820003DA43A /* TickTime */,
 				DAB3D8241AEDB820003DA43A /* TickTimeTests */,
@@ -331,6 +345,7 @@
 			files = (
 				DAAF532D1AF847060041673F /* LLSimpleCamera.m in Sources */,
 				DAAF53331AF857440041673F /* MZTimerLabel.m in Sources */,
+				DAF1AE7A1B40BCD10071F3C7 /* TTImagePreviewViewController.m in Sources */,
 				DA8C0C321AF6B3A4004B61F5 /* TTResourcesViewController.m in Sources */,
 				DAAF53291AF846F20041673F /* UIImage+FixOrientation.m in Sources */,
 				DAB3D8141AEDB820003DA43A /* TTLandingViewController.m in Sources */,
@@ -346,6 +361,7 @@
 				DAF1AE721B40A63D0071F3C7 /* TTMusicSelectorViewController.m in Sources */,
 				DA8C0C2C1AF6AB31004B61F5 /* TTSettingsViewController.m in Sources */,
 				DAF1AE5F1B3F9E290071F3C7 /* TTTimePickerViewController.m in Sources */,
+				DAF1AE751B40BBC60071F3C7 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

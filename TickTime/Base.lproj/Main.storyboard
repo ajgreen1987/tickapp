@@ -43,10 +43,65 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="URm-nH-gyD"/>
+                    <connections>
+                        <segue destination="ulm-FD-lzi" kind="push" identifier="Preview" id="1YS-kx-Cnt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ps0-Hk-1ua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="77" y="-423"/>
+        </scene>
+        <!--Image Preview View Controller-->
+        <scene sceneID="QJv-UR-eCm">
+            <objects>
+                <viewController id="ulm-FD-lzi" customClass="TTImagePreviewViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aYW-jy-NXV"/>
+                        <viewControllerLayoutGuide type="bottom" id="dAx-ku-Mw2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hM5-ET-RHX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upk-8Q-RyV">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Cancel" id="Gce-Hr-c3J">
+                                        <connections>
+                                            <action selector="handleCancelTouchUpInside:" destination="ulm-FD-lzi" id="EHY-jc-xeu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="WbS-eD-qxL"/>
+                                    <barButtonItem title="Save" id="eMX-eM-NI0">
+                                        <connections>
+                                            <action selector="handleSaveTouchUpInside:" destination="ulm-FD-lzi" id="YKw-25-GJi"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WD3-5W-dVX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WD3-5W-dVX" secondAttribute="trailing" id="EbS-yF-yYh"/>
+                            <constraint firstItem="WD3-5W-dVX" firstAttribute="top" secondItem="hM5-ET-RHX" secondAttribute="top" id="Q8M-oU-xIc"/>
+                            <constraint firstItem="upk-8Q-RyV" firstAttribute="bottom" secondItem="dAx-ku-Mw2" secondAttribute="top" id="UlR-yk-on7"/>
+                            <constraint firstItem="upk-8Q-RyV" firstAttribute="trailing" secondItem="WD3-5W-dVX" secondAttribute="trailing" id="cuH-Y8-Gbi"/>
+                            <constraint firstItem="upk-8Q-RyV" firstAttribute="leading" secondItem="hM5-ET-RHX" secondAttribute="leading" id="frX-Oz-3Nw"/>
+                            <constraint firstItem="upk-8Q-RyV" firstAttribute="top" secondItem="WD3-5W-dVX" secondAttribute="bottom" id="wNg-1z-76s"/>
+                            <constraint firstItem="upk-8Q-RyV" firstAttribute="leading" secondItem="WD3-5W-dVX" secondAttribute="leading" id="wzb-0D-r8s"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Ad-Te-C81"/>
+                    <connections>
+                        <outlet property="imageView" destination="WD3-5W-dVX" id="ePA-vC-6DL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHh-g0-UNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="483" y="-423"/>
         </scene>
         <!--Landing View Controller-->
         <scene sceneID="ufC-wZ-h7g">
