@@ -8,6 +8,7 @@
 
 #import "TTSettingsViewController.h"
 
+
 @interface TTSettingsViewController ()
 
 @end
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +36,26 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)handleTimeTouchUpInside:(id)sender
+{
+    TTTimePickerViewController *timePickerViewController = (TTTimePickerViewController*)[self.storyboard   instantiateViewControllerWithIdentifier:@"TimePicker"];
+    [timePickerViewController setPickerDelegate:self];
+    timePickerViewController.providesPresentationContextTransitionStyle = YES;
+    timePickerViewController.definesPresentationContext = YES;
+    [timePickerViewController setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    [self.navigationController presentViewController:timePickerViewController animated:YES completion:nil];
+    
+}
+
+#pragma mark - Picker Delegate
+- (void) didDismissWithTime:(NSDate *)aTime
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"hh:mm a"];
+    
+    [self.timePicker setTitle:[formatter stringFromDate:aTime]
+                     forState:UIControlStateNormal];
+}
 
 @end

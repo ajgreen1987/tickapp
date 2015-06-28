@@ -25,6 +25,7 @@
 		DAB3D8331AEDBBE9003DA43A /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8321AEDBBE9003DA43A /* UIImage+animatedGIF.m */; };
 		DAB3D8351AEDBC14003DA43A /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = DAB3D8341AEDBC14003DA43A /* gif.gif */; };
 		DAC9EEBC1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC9EEBB1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m */; };
+		DAF1AE5F1B3F9E290071F3C7 /* TTTimePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF1AE5E1B3F9E290071F3C7 /* TTTimePickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		DAB3D8341AEDBC14003DA43A /* gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif.gif; sourceTree = "<group>"; };
 		DAC9EEBA1B01A6D400E3B730 /* TTBaseMenuBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBaseMenuBackgroundView.h; sourceTree = "<group>"; };
 		DAC9EEBB1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseMenuBackgroundView.m; sourceTree = "<group>"; };
+		DAF1AE5D1B3F9E290071F3C7 /* TTTimePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTimePickerViewController.h; sourceTree = "<group>"; };
+		DAF1AE5E1B3F9E290071F3C7 /* TTTimePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTimePickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				DAAF532F1AF847320041673F /* TTTickCheckViewController.m */,
 				DAC9EEBA1B01A6D400E3B730 /* TTBaseMenuBackgroundView.h */,
 				DAC9EEBB1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m */,
+				DAF1AE5D1B3F9E290071F3C7 /* TTTimePickerViewController.h */,
+				DAF1AE5E1B3F9E290071F3C7 /* TTTimePickerViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				DA8C0C271AF6A1EC004B61F5 /* TTInstructionsViewController.m in Sources */,
 				DA8C0C2F1AF6AF96004B61F5 /* TTBaseViewController.m in Sources */,
 				DA8C0C2C1AF6AB31004B61F5 /* TTSettingsViewController.m in Sources */,
+				DAF1AE5F1B3F9E290071F3C7 /* TTTimePickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

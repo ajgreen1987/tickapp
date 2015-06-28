@@ -205,7 +205,7 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TyM-yW-dtL">
                                 <rect key="frame" x="16" y="28" width="288" height="437"/>
-                                <mutableString key="text">INSTRUCTIONS
+                                <string key="text">INSTRUCTIONS
 
 Use TickTime to check you and your family for ticks. TickTime reminds you to do a check, then
 
@@ -259,7 +259,7 @@ treatment and may not be construed as medical advice, diagnosis or treatment. No
 
 inaction should be taken based solely on the information provided in the application. Users should
 
-consult with appropriate health professionals on any matter relating to their health and well­being.</mutableString>
+consult with appropriate health professionals on any matter relating to their health and well­being.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -402,7 +402,7 @@ consult with appropriate health professionals on any matter relating to their he
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDz-T8-bw3">
-                                <rect key="frame" x="16" y="292" width="191" height="25"/>
+                                <rect key="frame" x="16" y="320" width="191" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="vSl-Ze-cz1"/>
                                 </constraints>
@@ -411,7 +411,7 @@ consult with appropriate health professionals on any matter relating to their he
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hour" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BR-gt-9ZH">
-                                <rect key="frame" x="16" y="386" width="191" height="25"/>
+                                <rect key="frame" x="16" y="414" width="191" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -433,7 +433,7 @@ consult with appropriate health professionals on any matter relating to their he
                                 <color key="minimumTrackTintColor" red="0.96862745100000003" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </slider>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QjM-Rd-wgz">
-                                <rect key="frame" x="16" y="335" width="288" height="29"/>
+                                <rect key="frame" x="16" y="363" width="288" height="29"/>
                                 <segments>
                                     <segment title="None"/>
                                     <segment title="Daily"/>
@@ -443,11 +443,33 @@ consult with appropriate health professionals on any matter relating to their he
                                 <color key="tintColor" red="0.96862745100000003" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdn-WB-DGz">
-                                <rect key="frame" x="215" y="376" width="89" height="44"/>
+                                <rect key="frame" x="215" y="404" width="89" height="44"/>
                                 <state key="normal" title="7:00 PM">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleTimeTouchUpInside:" destination="KYb-VR-PhM" eventType="touchUpInside" id="ra5-qe-JfS"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 minute" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fir-Ct-68Z">
+                                <rect key="frame" x="16" y="287" width="56" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="WKx-hZ-0ae"/>
+                                    <constraint firstAttribute="height" constant="13" id="rXP-vc-jl1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 minutes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fU3-cC-acg">
+                                <rect key="frame" x="255" y="287" width="56" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="13" id="jUL-Yq-Rfh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -455,7 +477,8 @@ consult with appropriate health professionals on any matter relating to their he
                             <constraint firstItem="zHr-Mw-EX4" firstAttribute="top" secondItem="DsT-ud-viG" secondAttribute="top" id="1lI-y4-lLV"/>
                             <constraint firstItem="zHr-Mw-EX4" firstAttribute="leading" secondItem="wZS-sk-Cmt" secondAttribute="leading" id="43e-ou-hCJ"/>
                             <constraint firstItem="QjM-Rd-wgz" firstAttribute="top" secondItem="bDz-T8-bw3" secondAttribute="bottom" constant="18" id="4G5-4U-b7p"/>
-                            <constraint firstItem="bDz-T8-bw3" firstAttribute="top" secondItem="ufk-Ct-2j8" secondAttribute="bottom" constant="8" symbolic="YES" id="4Kb-aF-zbU"/>
+                            <constraint firstItem="bDz-T8-bw3" firstAttribute="top" secondItem="ufk-Ct-2j8" secondAttribute="bottom" constant="36" id="4Kb-aF-zbU"/>
+                            <constraint firstItem="fir-Ct-68Z" firstAttribute="leading" secondItem="ufk-Ct-2j8" secondAttribute="leading" id="5Xx-vT-wKO"/>
                             <constraint firstItem="Zrl-qq-ehl" firstAttribute="leading" secondItem="DsT-ud-viG" secondAttribute="leading" id="63r-hN-YE6"/>
                             <constraint firstItem="7BR-gt-9ZH" firstAttribute="leading" secondItem="QjM-Rd-wgz" secondAttribute="leading" id="6L4-OX-eB8"/>
                             <constraint firstItem="UzV-z7-oi8" firstAttribute="leading" secondItem="n8U-NE-p8C" secondAttribute="leading" id="7TQ-xl-nb8"/>
@@ -484,24 +507,105 @@ consult with appropriate health professionals on any matter relating to their he
                             <constraint firstItem="bDz-T8-bw3" firstAttribute="leading" secondItem="QjM-Rd-wgz" secondAttribute="leading" id="adH-cE-BqX"/>
                             <constraint firstItem="ubF-2L-Q4z" firstAttribute="top" secondItem="n8U-NE-p8C" secondAttribute="bottom" constant="8" symbolic="YES" id="dXr-65-Aji"/>
                             <constraint firstItem="Jdn-WB-DGz" firstAttribute="top" secondItem="QjM-Rd-wgz" secondAttribute="bottom" constant="13" id="e2C-vt-bGw"/>
+                            <constraint firstItem="fU3-cC-acg" firstAttribute="leading" secondItem="zHr-Mw-EX4" secondAttribute="leading" id="fiK-SU-dsU"/>
                             <constraint firstItem="ubF-2L-Q4z" firstAttribute="trailing" secondItem="DsT-ud-viG" secondAttribute="trailing" id="gG8-Sf-CQg"/>
                             <constraint firstItem="wZS-sk-Cmt" firstAttribute="top" secondItem="ubF-2L-Q4z" secondAttribute="top" id="hD8-Cp-fTl"/>
                             <constraint firstItem="ufk-Ct-2j8" firstAttribute="leading" secondItem="bDz-T8-bw3" secondAttribute="leading" id="j7w-Jf-lNZ"/>
                             <constraint firstItem="Jdn-WB-DGz" firstAttribute="firstBaseline" secondItem="7BR-gt-9ZH" secondAttribute="firstBaseline" id="mva-i2-MR4"/>
                             <constraint firstItem="7BR-gt-9ZH" firstAttribute="top" secondItem="QjM-Rd-wgz" secondAttribute="bottom" constant="23" id="n8a-k7-WpG"/>
                             <constraint firstItem="XUF-mr-ncB" firstAttribute="trailing" secondItem="iYd-cC-zEn" secondAttribute="trailingMargin" id="ori-Jd-qZw"/>
+                            <constraint firstItem="fU3-cC-acg" firstAttribute="baseline" secondItem="fir-Ct-68Z" secondAttribute="baseline" id="pFv-eJ-5lE"/>
+                            <constraint firstItem="fU3-cC-acg" firstAttribute="top" secondItem="ufk-Ct-2j8" secondAttribute="bottom" constant="3" id="pQv-Ge-Lzh"/>
                             <constraint firstItem="ufk-Ct-2j8" firstAttribute="top" secondItem="Zrl-qq-ehl" secondAttribute="bottom" constant="8" symbolic="YES" id="qkD-17-3Xo"/>
                             <constraint firstItem="Zrl-qq-ehl" firstAttribute="trailing" secondItem="bDz-T8-bw3" secondAttribute="trailing" id="tOR-Ov-CJQ"/>
                             <constraint firstItem="UzV-z7-oi8" firstAttribute="top" secondItem="DGN-DL-6yD" secondAttribute="bottom" constant="21" id="tOi-BJ-xuD"/>
                             <constraint firstItem="QjM-Rd-wgz" firstAttribute="trailing" secondItem="ufk-Ct-2j8" secondAttribute="trailing" id="txv-sy-2Bk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fU3-cC-acg" secondAttribute="trailing" constant="-7" id="vEw-DS-FjG"/>
                             <constraint firstItem="bDz-T8-bw3" firstAttribute="trailing" secondItem="7BR-gt-9ZH" secondAttribute="trailing" id="zFH-I5-nJT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q0v-3k-23t"/>
+                    <connections>
+                        <outlet property="timePicker" destination="Jdn-WB-DGz" id="yZ7-lS-5wE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmL-lm-vWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="494" y="356"/>
+        </scene>
+        <!--Time Picker View Controller-->
+        <scene sceneID="4Lw-9L-lge">
+            <objects>
+                <viewController storyboardIdentifier="TimePicker" id="N20-NA-GeB" customClass="TTTimePickerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7U1-IL-xkp"/>
+                        <viewControllerLayoutGuide type="bottom" id="6e3-3t-Ler"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QEx-B8-GIJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Un7-ix-H3V">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="362"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="362" id="hXS-h5-FFl"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="N20-NA-GeB" eventType="touchUpInside" id="oSb-zG-ULz"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3E-xm-tvC">
+                                <rect key="frame" x="0.0" y="406" width="320" height="162"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aqa-aR-Art">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="457153249.74951899">
+                                            <!--2015-06-28 03:00:49 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="aqa-aR-Art" firstAttribute="top" secondItem="e3E-xm-tvC" secondAttribute="top" id="mar-cm-M4B"/>
+                                    <constraint firstItem="aqa-aR-Art" firstAttribute="leading" secondItem="e3E-xm-tvC" secondAttribute="leading" id="sna-Rd-em8"/>
+                                    <constraint firstAttribute="bottom" secondItem="aqa-aR-Art" secondAttribute="bottom" id="uwp-Q9-xMW"/>
+                                </constraints>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4F0-SA-h9c">
+                                <rect key="frame" x="0.0" y="362" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4Jc-aA-Rtv"/>
+                                    <barButtonItem style="done" systemItem="done" id="x82-Up-GgX">
+                                        <connections>
+                                            <action selector="dismissAndSave:" destination="N20-NA-GeB" id="BhO-eM-SX0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e3E-xm-tvC" firstAttribute="trailing" secondItem="4F0-SA-h9c" secondAttribute="trailing" id="0mL-f9-ksU"/>
+                            <constraint firstItem="4F0-SA-h9c" firstAttribute="leading" secondItem="Un7-ix-H3V" secondAttribute="leading" id="7Ic-x2-zzS"/>
+                            <constraint firstItem="4F0-SA-h9c" firstAttribute="leading" secondItem="e3E-xm-tvC" secondAttribute="leading" id="7ua-He-Rrx"/>
+                            <constraint firstItem="e3E-xm-tvC" firstAttribute="bottom" secondItem="6e3-3t-Ler" secondAttribute="top" id="CRZ-mQ-sGI"/>
+                            <constraint firstItem="Un7-ix-H3V" firstAttribute="trailing" secondItem="4F0-SA-h9c" secondAttribute="trailing" id="Ld0-ID-ScQ"/>
+                            <constraint firstItem="Un7-ix-H3V" firstAttribute="leading" secondItem="QEx-B8-GIJ" secondAttribute="leading" id="Nqs-sj-G8m"/>
+                            <constraint firstItem="Un7-ix-H3V" firstAttribute="top" secondItem="QEx-B8-GIJ" secondAttribute="top" id="i7X-l4-Wud"/>
+                            <constraint firstAttribute="trailing" secondItem="4F0-SA-h9c" secondAttribute="trailing" id="iDK-wb-o3w"/>
+                            <constraint firstItem="e3E-xm-tvC" firstAttribute="top" secondItem="4F0-SA-h9c" secondAttribute="bottom" id="pkk-tt-JzC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timePicker" destination="aqa-aR-Art" id="Ql0-Wm-9Kp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q8b-97-5tr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869" y="357"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

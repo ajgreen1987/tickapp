@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "TTBaseViewController.h"
+#import "TTTimePickerViewController.h"
 
-@interface TTSettingsViewController : TTBaseViewController
+@interface TTSettingsViewController : TTBaseViewController <UIActionSheetDelegate, TimePickerVCDelegate>
+
+- (IBAction)handleTimeTouchUpInside:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *timePicker;
 
 @end
+
