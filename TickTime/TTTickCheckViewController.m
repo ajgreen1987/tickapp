@@ -7,7 +7,6 @@
 //
 
 #import "TTTickCheckViewController.h"
-#import "MZTimerLabel.h"
 #import "AppDelegate.h"
 
 @interface TTTickCheckViewController ()
@@ -90,7 +89,6 @@
 
 - (void)snapButtonPressed:(UIButton *)button
 {
-
     __block TTTickCheckViewController *blockSafeSelf = self;
     
     // capture
@@ -133,6 +131,7 @@
     
     MZTimerLabel *timer = [[MZTimerLabel alloc] initWithLabel:label
                                                  andTimerType:MZTimerLabelTypeTimer];
+    [timer setDelegate:self];
     [timer setCountDownTime:appDelegate.countdownTimer];
     [timer start];
 }
@@ -149,6 +148,12 @@
         
     }
  }
+
+#pragma mark - Timer delegate
+- (void) timerLabel:(MZTimerLabel *)timerLabel finshedCountDownTimerWithTime:(NSTimeInterval)countTime
+{
+    [self snapButtonPressed:nil];
+}
 
 
 @end

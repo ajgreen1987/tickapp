@@ -7,7 +7,7 @@
 //
 
 #import "TTImagePreviewViewController.h"
-#import "ALAssetsLibrary+CustomPhotoAlbum.h"
+//#import "ALAssetsLibrary+CustomPhotoAlbum.h"
 
 @interface TTImagePreviewViewController ()
 
@@ -50,6 +50,7 @@
 
 - (IBAction)handleSaveTouchUpInside:(id)sender
 {
+    /*
     // Save to album
     [self.library saveImage:self.imageToDisplay toAlbum:@"Tick Time" withCompletionBlock:^(NSError *error)
     {
@@ -65,6 +66,7 @@
         
         [alert show];
     }];
+     */
 }
 
 - (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex

@@ -7,7 +7,8 @@
 //
 
 #import "LLSimpleCamera.h"
+#import "MZTimerLabel.h"
 
-@interface TTTickCheckViewController : LLSimpleCamera
+@interface TTTickCheckViewController : LLSimpleCamera <MZTimerLabelDelegate>
 
 @end

@@ -76,8 +76,7 @@
     
     if (isOn)
     {
-        [self performSegueWithIdentifier:@"SongSelector"
-                                  sender:self];
+        //MPMediaPlayerController
     }
     
 }
