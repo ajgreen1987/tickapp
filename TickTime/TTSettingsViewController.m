@@ -9,7 +9,6 @@
 #import "TTSettingsViewController.h"
 #import "AppDelegate.h"
 
-
 @interface TTSettingsViewController ()
 
 @end
@@ -76,15 +75,53 @@
     
     if (isOn)
     {
-        //MPMediaPlayerController
+        MPMediaPickerController *mediaPicker = [[MPMediaPickerController alloc] initWithMediaTypes: MPMediaTypeAny];
+        
+        mediaPicker.delegate = self;
+        mediaPicker.allowsPickingMultipleItems = YES;
+        mediaPicker.prompt = @"Select your TickTime Song";
+        
+        [self presentViewController:mediaPicker animated:YES completion:^{
+            
+        }];
     }
     
 }
 
-- (IBAction)handleTwitterSwitchValueChanged:(id)sender {
+- (IBAction)handleTwitterSwitchValueChanged:(id)sender
+{
+    UISwitch *twitter = (UISwitch*)sender;
+    BOOL isOn = twitter.isOn;
+    
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appDelegate setShouldShowTwitter:isOn];
 }
 
-- (IBAction)handleFacebookSwitchValueChanged:(id)sender {
+- (IBAction)handleFacebookSwitchValueChanged:(id)sender
+{
+    UISwitch *facebook = (UISwitch*)sender;
+    BOOL isOn = facebook.isOn;
+    
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appDelegate setShouldShowFacebook:isOn];
+}
+
+- (void) mediaPicker: (MPMediaPickerController *) mediaPicker didPickMediaItems: (MPMediaItemCollection *) mediaItemCollection
+{
+    if (mediaItemCollection)
+    {
+        AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+        [appDelegate setSong:mediaItemCollection];
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:^{
+    }];
+}
+
+- (void) mediaPickerDidCancel: (MPMediaPickerController *) mediaPicker
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+    }];
 }
 
 @end

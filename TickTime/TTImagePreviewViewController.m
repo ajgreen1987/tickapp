@@ -7,7 +7,8 @@
 //
 
 #import "TTImagePreviewViewController.h"
-//#import "ALAssetsLibrary+CustomPhotoAlbum.h"
+#import "ALAssetsLibrary+CustomPhotoAlbum.h"
+#import "AppDelegate.h"
 
 @interface TTImagePreviewViewController ()
 
@@ -45,11 +46,33 @@
 
 - (IBAction)handleCancelTouchUpInside:(id)sender
 {
-    [[self navigationController] popViewControllerAnimated:YES];
+    [[self navigationController] popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction)handleSaveTouchUpInside:(id)sender
 {
+    // Show share sheet
+    NSString *texttoshare = @"Just completed a TickTime check!";
+    UIImage *imagetoshare = self.imageToDisplay;
+    NSArray *activityItems = @[texttoshare, imagetoshare];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    
+    NSMutableArray *excluded = [[NSMutableArray alloc] initWithObjects:UIActivityTypeAssignToContact, UIActivityTypePrint, UIActivityTypePostToFlickr, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypeMail, UIActivityTypeMessage,UIActivityTypePostToFlickr, UIActivityTypePostToTencentWeibo, UIActivityTypePostToVimeo, UIActivityTypePostToWeibo, UIActivityTypePrint, nil];
+    
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    if (![appDelegate shouldShowFacebook])
+    {
+        [excluded addObject:UIActivityTypePostToFacebook];
+    }
+    if (![appDelegate shouldShowTwitter])
+    {
+        [excluded addObject:UIActivityTypePostToTwitter];
+    }
+    
+    activityVC.excludedActivityTypes = excluded;
+    
+    [self presentViewController:activityVC animated:TRUE completion:nil];
     /*
     // Save to album
     [self.library saveImage:self.imageToDisplay toAlbum:@"Tick Time" withCompletionBlock:^(NSError *error)
@@ -62,7 +85,7 @@
                                                         message:@"Your Tick Time capture has been saved. To view it please check the \"Tick Time\" album in photos."
                                                        delegate:self
                                               cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
+                                              otherButtonTitles:@"Share to Social Media",nil];
         
         [alert show];
     }];
@@ -71,7 +94,18 @@
 
 - (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    [[self navigationController] popToRootViewControllerAnimated:YES];
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    
+    if ([title containsString:@"Share"])
+    {
+        
+    }
+    else
+    {
+        [[self navigationController] popToRootViewControllerAnimated:YES];
+    }
+    
 }
+
 
 @end

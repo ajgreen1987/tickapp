@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "TTBaseViewController.h"
 #import "TTTimePickerViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface TTSettingsViewController : TTBaseViewController <UIActionSheetDelegate, TimePickerVCDelegate>
+@interface TTSettingsViewController : TTBaseViewController <UIActionSheetDelegate, TimePickerVCDelegate, MPMediaPickerControllerDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UIButton *timePicker;

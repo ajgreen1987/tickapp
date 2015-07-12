@@ -8,10 +8,13 @@
 
 #import "TTTickCheckViewController.h"
 #import "AppDelegate.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import "TTImagePreviewViewController.h"
 
 @interface TTTickCheckViewController ()
 
 @property (nonatomic, strong) UIImage *capturedImage;
+@property (nonatomic, strong) AVPlayer *player;
 
 @end
 
@@ -36,6 +39,26 @@
     [self setupTimerLabel];
     
     [self turnOnTorch];
+    [self playMusic];
+}
+
+- (void) playMusic
+{
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+
+    MPMediaItem *item = [[[appDelegate song] items] objectAtIndex:0];
+    NSURL *url = [item valueForProperty:MPMediaItemPropertyAssetURL];
+    
+    // Play the item using AVPlayer
+    
+    AVPlayerItem *playerItem = [[AVPlayerItem alloc] initWithURL:url];
+    self.player = [[AVPlayer alloc] initWithPlayerItem:playerItem];
+    [self.player play];
+}
+
+- (void) stopMusic
+{
+    [self.player pause];
 }
 
 - (void) turnOnTorch
@@ -101,12 +124,16 @@
             
             // show the image
             [blockSafeSelf setCapturedImage:image];
+            [blockSafeSelf stopMusic];
             
-            [blockSafeSelf performSegueWithIdentifier:@"Preview"
-                                               sender:self];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [blockSafeSelf pushPreview];
+            });
+
 
         }
-        else {
+        else
+        {
             NSLog(@"An error has occured: %@", error);
         }
     } exactSeenImage:YES];
@@ -139,14 +166,13 @@
  #pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void) pushPreview
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    if ([[segue identifier] isEqualToString:@"Preview"])
-    {
-        
-    }
+    TTImagePreviewViewController *preview = (TTImagePreviewViewController*) [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"Preview"];
+        [preview setImageToDisplay:self.capturedImage];
+    
+    [[self navigationController] pushViewController:preview animated:YES];
+
  }
 
 #pragma mark - Timer delegate

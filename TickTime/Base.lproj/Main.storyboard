@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="LS2-Qa-5Y7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="LS2-Qa-5Y7">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -43,18 +43,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="URm-nH-gyD"/>
-                    <connections>
-                        <segue destination="ulm-FD-lzi" kind="push" identifier="Preview" id="1YS-kx-Cnt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ps0-Hk-1ua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77" y="-423"/>
+            <point key="canvasLocation" x="100" y="-423"/>
         </scene>
         <!--Image Preview View Controller-->
         <scene sceneID="QJv-UR-eCm">
             <objects>
-                <viewController id="ulm-FD-lzi" customClass="TTImagePreviewViewController" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHh-g0-UNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="Preview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ulm-FD-lzi" customClass="TTImagePreviewViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aYW-jy-NXV"/>
                         <viewControllerLayoutGuide type="bottom" id="dAx-ku-Mw2"/>
@@ -72,7 +70,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WbS-eD-qxL"/>
-                                    <barButtonItem title="Save" id="eMX-eM-NI0">
+                                    <barButtonItem style="plain" systemItem="action" id="eMX-eM-NI0">
                                         <connections>
                                             <action selector="handleSaveTouchUpInside:" destination="ulm-FD-lzi" id="YKw-25-GJi"/>
                                         </connections>
@@ -99,9 +97,8 @@
                         <outlet property="imageView" destination="WD3-5W-dVX" id="ePA-vC-6DL"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qHh-g0-UNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="483" y="-423"/>
+            <point key="canvasLocation" x="645" y="-423"/>
         </scene>
         <!--Landing View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -170,17 +167,16 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cz6-uX-zEt" kind="modal" id="pam-9u-Rdr"/>
+                                    <segue destination="cz6-uX-zEt" kind="push" id="pam-9u-Rdr"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eol-f2-PMm">
                                 <rect key="frame" x="221" y="0.0" width="32" height="59"/>
-                                <color key="backgroundColor" red="0.76470588240000004" green="0.73725490199999999" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="lq6-aq-82p"/>
                                     <constraint firstAttribute="width" constant="32" id="n5D-PT-bj7"/>
                                 </constraints>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="facebook">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -193,7 +189,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="rGN-X0-lTY"/>
                                 </constraints>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="twitter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -290,7 +286,7 @@ During a check: If you find something, tap the shutter button to capture an imag
 
 (If you find one, don’t forget to complete your check after dealing with it.)
 
-After a check: Tap “Done” when you’re finished checking. Depending on your settings (see
+After a check: Tap “Save” when you’re finished checking. Depending on your settings (see
 
 below), you will be prompted to remind social media friends to do their own tick checks. Hit “Send”
 
@@ -696,6 +692,10 @@ consult with appropriate health professionals on any matter relating to their he
             <point key="canvasLocation" x="869" y="357"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebook" width="78" height="110"/>
+        <image name="twitter" width="78" height="110"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

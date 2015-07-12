@@ -39,6 +39,10 @@
 {
     [super viewDidLoad];
 
+    [[self facebook] setImage:[UIImage imageNamed:@"facebook"]
+                     forState:UIControlStateNormal];
+    [[self twitter] setImage:[UIImage imageNamed:@"twitter"]
+                    forState:UIControlStateNormal];
     
     [self animateBackground];
     [self animateSocialButtons];
