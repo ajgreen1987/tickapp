@@ -10,6 +10,7 @@
     <customFonts key="customFonts">
         <mutableArray key="Quicksand-Light.otf">
             <string>Quicksand-Light</string>
+            <string>Quicksand-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -266,62 +267,24 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TyM-yW-dtL">
                                 <rect key="frame" x="16" y="28" width="288" height="437"/>
-                                <string key="text">INSTRUCTIONS
+                                <mutableString key="text">INSTRUCTIONS
 
-Use TickTime to check you and your family for ticks. TickTime reminds you to do a check, then
+Use TickTime to check you and your family for ticks. TickTime reminds you to do a check, then uses your phone’s camera and light to help your inspection. It plays a song from your library,timed to allow you to do a comprehensive check after spending time outdoors in tick country.
 
-uses your phone’s camera and light to help your inspection. It plays a song from your library,
+Do a Check: When you tap “Do a Check,” TickTime activates the camera interface and the light, cues up your song, and displays the timer. Tap the shutter button to begin and start searching. (To learn the best way to check for ticks, visit the CDC web page under “Tick Resources.”)
 
-timed to allow you to do a comprehensive check after spending time outdoors in tick country.
+During a check: If you find something, tap the shutter button to capture an image in your gallery (the timer will pause, then resume). Go to “Tick Resources” for advice on removing ticks you find. (If you find one, don’t forget to complete your check after dealing with it.)
 
-Do a Check: When you tap “Do a Check,” TickTime activates the camera interface and the light,
+After a check: Tap “Save” when you’re finished checking. Depending on your settings (see below), you will be prompted to remind social media friends to do their own tick checks. Hit “Send” or “Cancel” for each social platform. 
 
-cues up your song, and displays the timer. Tap the shutter button to begin and start searching.
+Settings: Choose how TickTime works for you. Tap “Settings” to set the timer duration, set the time of day and frequency of reminders, choose your song (if you’ll be checking your kids, pick a song they love), and set social media preferences. Tick Resources: Tap this button to learn more about avoiding ticks, what to do if you find one, the kinds of ticks you might encounter, and the potential risk they may pose. We provide links to expert sources at the CDC and elsewhere, but please see the disclaimer below. You can also shop here for repellent, removal tweezers and other products.
 
-(To learn the best way to check for ticks, visit the CDC web page under “Tick Resources.”)
-
-During a check: If you find something, tap the shutter button to capture an image in your gallery
-
-(the timer will pause, then resume). Go to “Tick Resources” for advice on removing ticks you find.
-
-(If you find one, don’t forget to complete your check after dealing with it.)
-
-After a check: Tap “Save” when you’re finished checking. Depending on your settings (see
-
-below), you will be prompted to remind social media friends to do their own tick checks. Hit “Send”
-
-or “Cancel” for each social platform.
-
-Settings: Choose how TickTime works for you. Tap “Settings” to set the timer duration, set the
-
-time of day and frequency of reminders, choose your song (if you’ll be checking your kids, pick a
-
-song they love), and set social media preferences.
-
-Tick Resources: Tap this button to learn more about avoiding ticks, what to do if you find one, the
-
-kinds of ticks you might encounter, and the potential risk they may pose. We provide links to
-
-expert sources at the CDC and elsewhere, but please see the disclaimer below. You can also
-
-shop here for repellent, removal tweezers and other products.
-
-Your Images: When you do a check, you can snap a picture of anything you find and save it to a
-
-gallery. Tap “Your Images” to review.
+Your Images: When you do a check, you can snap a picture of anything you find and save it to a gallery. Tap “Your Images” to review.
 
 DISCLAIMER
 
-The information published in and discovered through TickTime is for general and educational
-
-purposes only. This application and instructions are in no way meant to be a substitute for medical
-
-treatment and may not be construed as medical advice, diagnosis or treatment. No action or
-
-inaction should be taken based solely on the information provided in the application. Users should
-
-consult with appropriate health professionals on any matter relating to their health and well­being.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+The information published in and discovered through TickTime is for general and educational purposes only. This application and instructions are in no way meant to be a substitute for medical treatment and may not be construed as medical advice, diagnosis or treatment. No action or inaction should be taken based solely on the information provided in the application. Users should consult with appropriate health professionals on any matter relating to their health and well ­being.</mutableString>
+                                <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
