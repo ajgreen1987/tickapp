@@ -45,13 +45,10 @@
 - (void) playMusic
 {
     AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-
-    MPMediaItem *item = [[[appDelegate song] items] objectAtIndex:0];
-    NSURL *url = [item valueForProperty:MPMediaItemPropertyAssetURL];
     
     // Play the item using AVPlayer
     
-    AVPlayerItem *playerItem = [[AVPlayerItem alloc] initWithURL:url];
+    AVPlayerItem *playerItem = [[AVPlayerItem alloc] initWithURL:appDelegate.songURL];
     self.player = [[AVPlayer alloc] initWithPlayerItem:playerItem];
     [self.player play];
 }
@@ -141,8 +138,7 @@
 
 - (void) cancelTouched:(UIButton*) button
 {
-    [self dismissViewControllerAnimated:YES
-                             completion:nil];
+    [[self navigationController] popToRootViewControllerAnimated:YES];
 }
 
 - (void) setupTimerLabel

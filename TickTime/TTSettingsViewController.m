@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+    [self setupFromDefaults];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,15 +27,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) setupFromDefaults
+{
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    [self.facebook setOn:[appDelegate shouldShowFacebook]];
+    [self.twitter setOn:[appDelegate shouldShowTwitter]];
+    [self.music setOn:([appDelegate songURL] != nil)];
 }
-*/
 
 - (IBAction)handleTimeTouchUpInside:(id)sender
 {
@@ -85,6 +84,12 @@
             
         }];
     }
+    else
+    {
+        AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+        
+        [appDelegate setSongURL:nil];
+    }
     
 }
 
@@ -110,8 +115,11 @@
 {
     if (mediaItemCollection)
     {
+        MPMediaItem *item = [[mediaItemCollection items] objectAtIndex:0];
+        NSURL *url = [item valueForProperty:MPMediaItemPropertyAssetURL];
+        
         AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-        [appDelegate setSong:mediaItemCollection];
+        [appDelegate setSongURL:url];
     }
     
     [self dismissViewControllerAnimated:YES completion:^{

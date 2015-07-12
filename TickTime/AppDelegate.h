@@ -15,10 +15,14 @@
 @property (nonatomic, assign) NSInteger countdownTimer;
 @property (nonatomic, assign) BOOL shouldShowFacebook;
 @property (nonatomic, assign) BOOL shouldShowTwitter;
-@property (nonatomic, strong) MPMediaItemCollection *song;
+@property (nonatomic, strong) NSURL *songURL;
 
 + (UIFont*) systemFontOfSize:(CGFloat)aSize;
 + (void) openURL:(NSURL*)aURL;
++ (void) writeBool:(BOOL)aBooleanValue forKey:(NSString*)aKey;
++ (void) writeString:(NSString*)aStringValue forKey:(NSString*)aKey;
++ (BOOL) readBoolForKey:(NSString*)aKey;
++ (NSString*) readStringForKey:(NSString*)aKey;
 
 @end
 

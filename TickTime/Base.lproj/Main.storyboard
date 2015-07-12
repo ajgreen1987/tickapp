@@ -573,7 +573,11 @@ The information published in and discovered through TickTime is for general and 
                     </view>
                     <navigationItem key="navigationItem" id="q0v-3k-23t"/>
                     <connections>
+                        <outlet property="facebook" destination="XUF-mr-ncB" id="VN3-Dh-57C"/>
+                        <outlet property="music" destination="zHr-Mw-EX4" id="Xp1-cM-Bcx"/>
                         <outlet property="timePicker" destination="Jdn-WB-DGz" id="yZ7-lS-5wE"/>
+                        <outlet property="timer" destination="ufk-Ct-2j8" id="KsO-D0-SNU"/>
+                        <outlet property="twitter" destination="wZS-sk-Cmt" id="geV-Wn-2dE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmL-lm-vWm" userLabel="First Responder" sceneMemberID="firstResponder"/>

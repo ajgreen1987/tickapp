@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 
+#define FACEBOOK @"FB"
+#define TWITTER @"Twitter"
+#define SONG    @"URL"
+
 @interface AppDelegate ()
 
 @end
@@ -49,7 +53,38 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-#pragma mark -
+#pragma mark - Settings
+- (void) setShouldShowFacebook:(BOOL)shouldShowFacebook
+{
+    [AppDelegate writeBool:shouldShowFacebook forKey:FACEBOOK];
+}
+
+- (void) setShouldShowTwitter:(BOOL)shouldShowTwitter
+{
+    [AppDelegate writeBool:shouldShowTwitter forKey:TWITTER];
+}
+
+- (BOOL) shouldShowFacebook
+{
+    return [AppDelegate readBoolForKey:FACEBOOK];
+}
+
+- (BOOL) shouldShowTwitter
+{
+    return [AppDelegate readBoolForKey:TWITTER];
+}
+
+- (void) setSongURL:(NSURL *)songURL
+{
+    [AppDelegate writeString:[songURL absoluteString] forKey:SONG];
+}
+
+- (NSURL*) songURL
+{
+    return [NSURL URLWithString:[AppDelegate readStringForKey:SONG]];
+}
+
+
 #pragma mark - Font Helpers
 
 + (UIFont*) systemFontOfSize:(CGFloat)aSize
@@ -64,6 +99,28 @@
     {
         [[UIApplication sharedApplication] openURL:aURL];
     }
+}
+
++ (void) writeBool:(BOOL)aBooleanValue forKey:(NSString*)aKey
+{
+    [[NSUserDefaults standardUserDefaults] setBool:aBooleanValue
+                                            forKey:aKey];
+}
+
++ (void) writeString:(NSString*)aStringValue forKey:(NSString*)aKey
+{
+    [[NSUserDefaults standardUserDefaults] setValue:aStringValue
+                                             forKey:aKey];
+}
+
++ (BOOL) readBoolForKey:(NSString*)aKey
+{
+    return [[NSUserDefaults standardUserDefaults] boolForKey:aKey];
+}
+
++ (NSString*) readStringForKey:(NSString*)aKey
+{
+    return [[NSUserDefaults standardUserDefaults] valueForKey:aKey];
 }
 
 @end

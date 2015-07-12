@@ -14,6 +14,10 @@
 @interface TTSettingsViewController : TTBaseViewController <UIActionSheetDelegate, TimePickerVCDelegate, MPMediaPickerControllerDelegate>
 
 
+@property (weak, nonatomic) IBOutlet UISwitch *facebook;
+@property (weak, nonatomic) IBOutlet UISwitch *twitter;
+@property (weak, nonatomic) IBOutlet UISwitch *music;
+@property (weak, nonatomic) IBOutlet UISlider *timer;
 @property (weak, nonatomic) IBOutlet UIButton *timePicker;
 
 - (IBAction)handleTimeTouchUpInside:(id)sender;
