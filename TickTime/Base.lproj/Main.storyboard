@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="LS2-Qa-5Y7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="LS2-Qa-5Y7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -41,9 +41,18 @@
                     <view key="view" contentMode="scaleToFill" id="pRT-84-zwE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v1Q-CY-7dG" customClass="SFCountdownView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="URm-nH-gyD"/>
+                    <connections>
+                        <outlet property="theFinalCountdown" destination="v1Q-CY-7dG" id="kvr-yN-r51"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ps0-Hk-1ua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,7 +61,6 @@
         <!--Image Preview View Controller-->
         <scene sceneID="QJv-UR-eCm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qHh-g0-UNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Preview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ulm-FD-lzi" customClass="TTImagePreviewViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aYW-jy-NXV"/>
@@ -98,6 +106,7 @@
                         <outlet property="imageView" destination="WD3-5W-dVX" id="ePA-vC-6DL"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHh-g0-UNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="645" y="-423"/>
         </scene>
@@ -119,6 +128,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttO-p1-ghh" customClass="TTButton">
                                 <rect key="frame" x="16" y="458" width="120" height="33"/>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Instructions">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -130,6 +140,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vz-sg-dZD" customClass="TTButton">
                                 <rect key="frame" x="184" y="458" width="120" height="33"/>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Settings">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -141,6 +152,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmA-Qp-oDf" customClass="TTButton">
                                 <rect key="frame" x="16" y="515" width="120" height="33"/>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Resources">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -152,10 +164,14 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGb-PO-Pfz" customClass="TTButton">
                                 <rect key="frame" x="184" y="515" width="120" height="33"/>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Saved Images">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleSavedImagesTouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oXq-Gw-T39"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt9-qX-K27" customClass="TTButton">
                                 <rect key="frame" x="91" y="351" width="138" height="45"/>
@@ -163,6 +179,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="w16-M4-spE"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Do A Check">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -172,12 +189,12 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eol-f2-PMm">
-                                <rect key="frame" x="221" y="0.0" width="32" height="59"/>
+                                <rect key="frame" x="221" y="0.0" width="32" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="lq6-aq-82p"/>
+                                    <constraint firstAttribute="height" constant="45" id="lq6-aq-82p"/>
                                     <constraint firstAttribute="width" constant="32" id="n5D-PT-bj7"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="facebook">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -186,11 +203,11 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zi-1X-8kd">
-                                <rect key="frame" x="272" y="0.0" width="32" height="59"/>
+                                <rect key="frame" x="272" y="0.0" width="32" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="rGN-X0-lTY"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="twitter">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -203,7 +220,7 @@
                         <constraints>
                             <constraint firstItem="1Zi-1X-8kd" firstAttribute="leading" secondItem="Eol-f2-PMm" secondAttribute="trailing" constant="19" id="7MM-Fb-JmW"/>
                             <constraint firstItem="GmA-Qp-oDf" firstAttribute="top" secondItem="ttO-p1-ghh" secondAttribute="bottom" constant="24" id="BDI-bt-hiW"/>
-                            <constraint firstItem="1Zi-1X-8kd" firstAttribute="baseline" secondItem="Eol-f2-PMm" secondAttribute="firstBaseline" id="COU-0a-jNh"/>
+                            <constraint firstItem="1Zi-1X-8kd" firstAttribute="baseline" secondItem="Eol-f2-PMm" secondAttribute="firstBaseline" constant="-18" id="COU-0a-jNh"/>
                             <constraint firstItem="47n-1s-pM4" firstAttribute="centerX" secondItem="pt9-qX-K27" secondAttribute="centerX" id="EPW-7G-OPl"/>
                             <constraint firstItem="GmA-Qp-oDf" firstAttribute="width" secondItem="ttO-p1-ghh" secondAttribute="width" id="FIR-pJ-ROh"/>
                             <constraint firstItem="Eol-f2-PMm" firstAttribute="height" secondItem="1Zi-1X-8kd" secondAttribute="height" id="Fud-5y-zWj"/>
@@ -217,7 +234,6 @@
                             <constraint firstItem="5vz-sg-dZD" firstAttribute="trailing" secondItem="1Zi-1X-8kd" secondAttribute="trailing" id="R5j-0v-XuT"/>
                             <constraint firstItem="GmA-Qp-oDf" firstAttribute="height" secondItem="ttO-p1-ghh" secondAttribute="height" id="R5o-ku-f2e"/>
                             <constraint firstItem="GmA-Qp-oDf" firstAttribute="height" secondItem="5vz-sg-dZD" secondAttribute="height" id="TTM-Vl-k4u"/>
-                            <constraint firstItem="Eol-f2-PMm" firstAttribute="width" secondItem="1Zi-1X-8kd" secondAttribute="height" multiplier="32:59" id="VeC-Zj-RMi"/>
                             <constraint firstItem="GmA-Qp-oDf" firstAttribute="leading" secondItem="ttO-p1-ghh" secondAttribute="leading" id="Xdk-Wq-lMg"/>
                             <constraint firstItem="ttO-p1-ghh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Y0i-91-Wdc"/>
                             <constraint firstItem="Eol-f2-PMm" firstAttribute="width" secondItem="1Zi-1X-8kd" secondAttribute="width" id="Ydl-LX-PQT"/>
@@ -233,7 +249,7 @@
                             <constraint firstItem="GmA-Qp-oDf" firstAttribute="width" secondItem="ttO-p1-ghh" secondAttribute="height" multiplier="40:11" id="qLh-mn-LGu"/>
                             <constraint firstItem="GmA-Qp-oDf" firstAttribute="width" secondItem="5vz-sg-dZD" secondAttribute="width" id="v0O-a4-Quc"/>
                             <constraint firstItem="pt9-qX-K27" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="75" id="yPp-v9-HVC"/>
-                            <constraint firstItem="Eol-f2-PMm" firstAttribute="baseline" secondItem="1Zi-1X-8kd" secondAttribute="firstBaseline" id="yhZ-IW-2hJ"/>
+                            <constraint firstItem="Eol-f2-PMm" firstAttribute="baseline" secondItem="1Zi-1X-8kd" secondAttribute="firstBaseline" constant="-18" id="yhZ-IW-2hJ"/>
                             <constraint firstAttribute="trailing" secondItem="47n-1s-pM4" secondAttribute="trailing" id="z9X-F5-ntL"/>
                         </constraints>
                     </view>
@@ -251,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64" y="357"/>
+            <point key="canvasLocation" x="-115" y="356"/>
         </scene>
         <!--Instructions View Controller-->
         <scene sceneID="Kvo-5V-VbE">
@@ -265,26 +281,139 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TyM-yW-dtL">
-                                <rect key="frame" x="16" y="28" width="288" height="437"/>
-                                <mutableString key="text">INSTRUCTIONS
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TyM-yW-dtL">
+                                <rect key="frame" x="16" y="28" width="288" height="1659"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="INSTRUCTIONS">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Use TickTime to check you and your family for ticks. TickTime reminds you to do a check, then uses your phone’s camera and light to help your inspection. It plays a song from your library,timed to allow you to do a comprehensive check after spending time outdoors in tick country.
 
-Use TickTime to check you and your family for ticks. TickTime reminds you to do a check, then uses your phone’s camera and light to help your inspection. It plays a song from your library,timed to allow you to do a comprehensive check after spending time outdoors in tick country.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Do a Check: ">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">When you tap “Do a Check,” TickTime activates the camera interface and the light, cues up your song, and displays the timer. Tap the shutter button to begin and start searching. (To learn the best way to check for ticks, visit the CDC web page under “Tick Resources.”)
 
-Do a Check: When you tap “Do a Check,” TickTime activates the camera interface and the light, cues up your song, and displays the timer. Tap the shutter button to begin and start searching. (To learn the best way to check for ticks, visit the CDC web page under “Tick Resources.”)
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="During a check:">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> If you find something, tap the shutter button to capture an image in your gallery (the timer will pause, then resume). Go to “Tick Resources” for advice on removing ticks you find. (If you find one, don’t forget to complete your check after dealing with it.)
 
-During a check: If you find something, tap the shutter button to capture an image in your gallery (the timer will pause, then resume). Go to “Tick Resources” for advice on removing ticks you find. (If you find one, don’t forget to complete your check after dealing with it.)
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="After a check: ">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Tap “Save” when you’re finished checking. Depending on your settings (see below), you will be prompted to remind social media friends to do their own tick checks. Hit “Send” or “Cancel” for each social platform. 
 
-After a check: Tap “Save” when you’re finished checking. Depending on your settings (see below), you will be prompted to remind social media friends to do their own tick checks. Hit “Send” or “Cancel” for each social platform. 
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Settings: ">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Choose how TickTime works for you. Tap “Settings” to set the timer duration, set the time of day and frequency of reminders, choose your song (if you’ll be checking your kids, pick a song they love), and set social media preferences.
 
-Settings: Choose how TickTime works for you. Tap “Settings” to set the timer duration, set the time of day and frequency of reminders, choose your song (if you’ll be checking your kids, pick a song they love), and set social media preferences. Tick Resources: Tap this button to learn more about avoiding ticks, what to do if you find one, the kinds of ticks you might encounter, and the potential risk they may pose. We provide links to expert sources at the CDC and elsewhere, but please see the disclaimer below. You can also shop here for repellent, removal tweezers and other products.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Tick Resources: ">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Tap this button to learn more about avoiding ticks, what to do if you find one, the kinds of ticks you might encounter, and the potential risk they may pose. We provide links to expert sources at the CDC and elsewhere, but please see the disclaimer below. You can also shop here for repellent, removal tweezers and other products.
 
-Your Images: When you do a check, you can snap a picture of anything you find and save it to a gallery. Tap “Your Images” to review.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Your Images: ">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">When you do a check, you can snap a picture of anything you find and save it to a gallery. Tap “Your Images” to review.
 
-DISCLAIMER
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="DISCLAIMER">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
 
-The information published in and discovered through TickTime is for general and educational purposes only. This application and instructions are in no way meant to be a substitute for medical treatment and may not be construed as medical advice, diagnosis or treatment. No action or inaction should be taken based solely on the information provided in the application. Users should consult with appropriate health professionals on any matter relating to their health and well ­being.</mutableString>
-                                <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="17"/>
+The information published in and discovered through TickTime is for general and educational purposes only. This application and instructions are in no way meant to be a substitute for medical treatment and may not be construed as medical advice, diagnosis or treatment. No action or inaction should be taken based solely on the information provided in the application. Users should consult with appropriate health professionals on any matter relating to their health and well ­being.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -320,6 +449,7 @@ The information published in and discovered through TickTime is for general and 
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="xx4-cN-8wF"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Tick Facts">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -334,6 +464,7 @@ The information published in and discovered through TickTime is for general and 
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="vyR-4U-rvi"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="CDC Info">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -354,6 +485,7 @@ The information published in and discovered through TickTime is for general and 
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDd-ZH-fJp" customClass="TTButton">
                                 <rect key="frame" x="91" y="323" width="138" height="45"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Tick Products">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -659,10 +791,6 @@ The information published in and discovered through TickTime is for general and 
             <point key="canvasLocation" x="869" y="357"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="facebook" width="78" height="110"/>
-        <image name="twitter" width="78" height="110"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
-@interface TTImagePreviewViewController : UIViewController <UIAlertViewDelegate>
+@interface TTImagePreviewViewController : UIViewController <UIAlertViewDelegate, UIActivityItemSource>
 
 @property (nonatomic, strong) UIImage *imageToDisplay;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

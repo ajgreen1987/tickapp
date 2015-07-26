@@ -21,5 +21,6 @@
 
 - (IBAction)handleFacebookTouchUpInside:(id)sender;
 - (IBAction)handleTwitterTouchUpInside:(id)sender;
+- (IBAction)handleSavedImagesTouchUpInside:(id)sender;
 @end
 

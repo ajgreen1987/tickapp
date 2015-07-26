@@ -11,8 +11,9 @@
 #import "AppDelegate.h"
 
 #define LAST_FRAME                      @"lastFrame"
+#define TICK                            @"tick"
 #define GIF                             @"gif"
-#define BACKGROUND_ANIMATION_DURATION   5.1
+#define BACKGROUND_ANIMATION_DURATION   4.8
 #define SOCIAL_ANIMATION_DURATION       1.2
 #define BUTTON_ALPHA_ZERO               0.0f
 #define BUTTON_ALPHA_ONE                1.0f
@@ -38,11 +39,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    [[self facebook] setImage:[UIImage imageNamed:@"facebook"]
-                     forState:UIControlStateNormal];
-    [[self twitter] setImage:[UIImage imageNamed:@"twitter"]
-                    forState:UIControlStateNormal];
     
     [self animateBackground];
     [self animateSocialButtons];
@@ -60,7 +56,7 @@
  */
 - (void) animateBackground
 {
-    NSString *path=[[NSBundle mainBundle]pathForResource:GIF
+    NSString *path=[[NSBundle mainBundle]pathForResource:TICK
                                                   ofType:GIF];
     
     NSURL *url=[[NSURL alloc] initFileURLWithPath:path];
@@ -199,4 +195,14 @@
 {
     [AppDelegate openURL:[NSURL URLWithString:@"https://www.twitter.com/ticktimeapp"]];
 }
+
+- (IBAction)handleSavedImagesTouchUpInside:(id)sender
+{
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    [imagePicker.view setFrame:self.view.bounds];
+    [imagePicker setSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+    
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
 @end

@@ -27,17 +27,17 @@
 
 - (IBAction)handleCDCTouchUpInside:(id)sender
 {
-    [AppDelegate openURL:[NSURL URLWithString:@"http://www.cdc.gov/ticks/"]];
+    [AppDelegate openURL:[NSURL URLWithString:@"http://www.cdc.gov/ticks/removing_a_tick.html"]];
 }
 
 - (IBAction)handleTickProductsTouchUpInside:(id)sender
 {
-    [AppDelegate openURL:[NSURL URLWithString:@"http://www.amazon.com/gp/aw/s/ref=is_s_ss_i_0_5?k=tick+repellent&sprefix=Tick+"]];
+    [AppDelegate openURL:[NSURL URLWithString:@"http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=tick+removal&rh=i%3Aaps%2Ck%3Atick+removal"]];
 }
 
 - (IBAction)handleTickFactsTouchUpInside:(id)sender
 {
-    [AppDelegate openURL:[NSURL URLWithString:@"https://en.m.wikipedia.org/wiki/Tick"]];
+    [AppDelegate openURL:[NSURL URLWithString:@"http://www.tickencounter.org"]];
 }
 
 @end

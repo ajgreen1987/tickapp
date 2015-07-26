@@ -34,6 +34,11 @@
     [self.facebook setOn:[appDelegate shouldShowFacebook]];
     [self.twitter setOn:[appDelegate shouldShowTwitter]];
     [self.music setOn:([appDelegate songURL] != nil)];
+    
+    NSString *time = [self formattedDate:appDelegate.notificationDate];
+    
+    [self.timePicker setTitle:(time == nil) ? [self formattedDate:[NSDate date]] : time
+                     forState:UIControlStateNormal];
 }
 
 - (IBAction)handleTimeTouchUpInside:(id)sender
@@ -50,11 +55,24 @@
 #pragma mark - Picker Delegate
 - (void) didDismissWithTime:(NSDate *)aTime
 {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"hh:mm a"];
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appDelegate setNotificationDate:aTime];
+    [self scheduleNotificationForTime:aTime];
     
-    [self.timePicker setTitle:[formatter stringFromDate:aTime]
+    [self.timePicker setTitle:[self formattedDate:aTime]
                      forState:UIControlStateNormal];
+}
+
+- (void) scheduleNotificationForTime:(NSDate*)aTime
+{
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.fireDate = aTime;
+    notification.alertBody = @"TickTime Reminder!";
+    notification.timeZone = [NSTimeZone defaultTimeZone];
+    notification.soundName = UILocalNotificationDefaultSoundName;
+    notification.applicationIconBadgeNumber = 1;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 
 - (IBAction)handleCountdownTimerValueChanged:(id)sender
@@ -120,16 +138,26 @@
         
         AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
         [appDelegate setSongURL:url];
+        
+        [mediaPicker dismissViewControllerAnimated:YES completion:^{
+        }];
     }
     
-    [self dismissViewControllerAnimated:YES completion:^{
-    }];
+
 }
 
 - (void) mediaPickerDidCancel: (MPMediaPickerController *) mediaPicker
 {
     [self dismissViewControllerAnimated:YES completion:^{
     }];
+}
+
+- (NSString*) formattedDate:(NSDate*)aDate
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"hh:mm a"];
+    
+    return [formatter stringFromDate:aDate];
 }
 
 @end

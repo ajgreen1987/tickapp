@@ -10,4 +10,6 @@
 
 @interface TTButton : UIButton
 
+- (id) initWithFrame:(CGRect)frame andFontSize:(CGFloat)aFontSize;
+
 @end

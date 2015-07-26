@@ -7,7 +7,6 @@
 //
 
 #import "TTImagePreviewViewController.h"
-#import "ALAssetsLibrary+CustomPhotoAlbum.h"
 #import "AppDelegate.h"
 
 @interface TTImagePreviewViewController ()
@@ -73,23 +72,40 @@
     activityVC.excludedActivityTypes = excluded;
     
     [self presentViewController:activityVC animated:TRUE completion:nil];
-    /*
-    // Save to album
-    [self.library saveImage:self.imageToDisplay toAlbum:@"Tick Time" withCompletionBlock:^(NSError *error)
-    {
-        if (error!=nil) {
-            NSLog(@"Big error: %@", [error description]);
+    
+    [activityVC setCompletionWithItemsHandler:^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError){
+        
+        if (activityError == nil)
+        {
+            if ([activityType isEqualToString:UIActivityTypePostToFacebook])
+            {
+                
+            }
+            else if([activityType isEqualToString:UIActivityTypePostToTwitter])
+            {
+            }
+        }
+        else
+        {
+            // Error alert!
         }
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Image Saved"
-                                                        message:@"Your Tick Time capture has been saved. To view it please check the \"Tick Time\" album in photos."
-                                                       delegate:self
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:@"Share to Social Media",nil];
-        
-        [alert show];
     }];
-     */
+}
+
+- (id) activityViewController:(UIActivityViewController *)activityViewController itemForActivityType:(NSString *)activityType
+{
+    if ([activityType isEqualToString:UIActivityTypePostToFacebook])
+    {
+        return @"I just did a #TickCheck with @TickTime! Download TickTime: bit.ly/adfjh3fhg";
+    }
+    else if ([activityType isEqualToString:UIActivityTypePostToTwitter])
+    {
+        return @"I just did a #TickCheck with @TickTimeApp! Download TickTime: bit.ly/adfjh3fhg";
+    }
+    else {
+        return nil;
+    }
 }
 
 - (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex

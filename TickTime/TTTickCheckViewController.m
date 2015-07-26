@@ -10,11 +10,13 @@
 #import "AppDelegate.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "TTImagePreviewViewController.h"
+#import "ALAssetsLibrary+CustomPhotoAlbum.h"
 
 @interface TTTickCheckViewController ()
 
 @property (nonatomic, strong) UIImage *capturedImage;
 @property (nonatomic, strong) AVPlayer *player;
+@property (nonatomic, assign) BOOL isFirstTime;
 
 @end
 
@@ -29,17 +31,47 @@
 {
     [super viewDidLoad];
     
-    [self start];
+    [self setupCountdown];
 }
 
 - (void) viewDidAppear:(BOOL)animated
+{
+    if (!self.isFirstTime)
+    {
+        [self setupForCapture];
+    }
+}
+
+- (void) setupForCapture
 {
     [[self view] addSubview:[self snapButton]];
     [[self view] addSubview:[self cancelButton]];
     [self setupTimerLabel];
     
     [self turnOnTorch];
+    [self autofocus];
     [self playMusic];
+}
+
+- (void) setupCountdown
+{
+    // sets the delegate
+    self.theFinalCountdown.delegate = self;
+    
+    // background alpha value
+    self.theFinalCountdown.backgroundAlpha = 0.2f;
+    
+    // the color of the counter
+    self.theFinalCountdown.countdownColor = [UIColor whiteColor];
+    
+    // countdown start value
+    self.theFinalCountdown.countdownFrom = 3;
+    
+    
+    // necessary to refresh alpha and countdown color
+    [self.theFinalCountdown updateAppearance];
+    
+    [self.theFinalCountdown start];
 }
 
 - (void) playMusic
@@ -56,6 +88,14 @@
 - (void) stopMusic
 {
     [self.player pause];
+}
+
+- (void) autofocus
+{
+    if ([self.captureDevice isFocusModeSupported:AVCaptureFocusModeAutoFocus])
+    {
+        self.captureDevice.focusMode = AVCaptureFocusModeAutoFocus;
+    }
 }
 
 - (void) turnOnTorch
@@ -114,6 +154,24 @@
     // capture
     [self capture:^(LLSimpleCamera *camera, UIImage *image, NSDictionary *metadata, NSError *error) {
         if(!error) {
+            
+            /*
+             // Save to album
+             [self.library saveImage:self.imageToDisplay toAlbum:@"Tick Time" withCompletionBlock:^(NSError *error)
+             {
+             if (error!=nil) {
+             NSLog(@"Big error: %@", [error description]);
+             }
+             
+             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Image Saved"
+             message:@"Your Tick Time capture has been saved. To view it please check the \"Tick Time\" album in photos."
+             delegate:self
+             cancelButtonTitle:@"OK"
+             otherButtonTitles:@"Share to Social Media",nil];
+             
+             [alert show];
+             }];
+             */
             
             // we should stop the camera, since we don't need it anymore. We will open a new vc.
             // this very important, otherwise you may experience memory crashes
@@ -175,6 +233,14 @@
 - (void) timerLabel:(MZTimerLabel *)timerLabel finshedCountDownTimerWithTime:(NSTimeInterval)countTime
 {
     [self snapButtonPressed:nil];
+}
+
+#pragma mark - Countdown delegate
+- (void) countdownFinished:(SFCountdownView *)view
+{
+    [view stop];
+    [self start];
+    [self setupForCapture];
 }
 
 

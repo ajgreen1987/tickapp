@@ -50,7 +50,7 @@
     CGFloat width = 140.0f;
     CGFloat selfViewHeight = self.view.frame.size.height;
 
-    TTButton *home = [[TTButton alloc] initWithFrame:CGRectMake(xOrigin, yOrigin, width, height)];
+    TTButton *home = [[TTButton alloc] initWithFrame:CGRectMake(xOrigin, yOrigin, width, height) andFontSize:20.0f];
     
     [home setTitle:homeTitle forState:UIControlStateNormal];
     [home setCenter:CGPointMake(self.view.center.x, (selfViewHeight - height))];

@@ -17,7 +17,7 @@
     
     if (self)
     {
-        [self initializer];
+        [self initializerFontSize:self.titleLabel.font.pointSize];
     }
     
     return self;
@@ -29,15 +29,27 @@
     
     if (self)
     {
-        [self initializer];
+        [self initializerFontSize:self.titleLabel.font.pointSize];
     }
     
     return self;
 }
 
-- (void) initializer
+- (id) initWithFrame:(CGRect)frame andFontSize:(CGFloat)aFontSize
 {
-    [[self titleLabel] setFont:[AppDelegate systemFontOfSize:self.titleLabel.font.pointSize]];
+    self = [super initWithFrame:frame];
+    
+    if (self)
+    {
+        [self initializerFontSize:aFontSize];
+    }
+    
+    return self;
+}
+
+- (void) initializerFontSize:(CGFloat)aFontSize
+{
+    [[self titleLabel] setFont:[AppDelegate systemFontOfSize:aFontSize]];
     [self setBackgroundColor:[UIColor clearColor]];
     [self setBackgroundImage:[UIImage imageNamed:@"button"]
                     forState:UIControlStateNormal];

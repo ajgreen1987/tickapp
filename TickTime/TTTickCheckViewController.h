@@ -8,7 +8,10 @@
 
 #import "LLSimpleCamera.h"
 #import "MZTimerLabel.h"
+#import "SFCountdownView.h"
 
-@interface TTTickCheckViewController : LLSimpleCamera <MZTimerLabelDelegate>
+@interface TTTickCheckViewController : LLSimpleCamera <MZTimerLabelDelegate, SFCountdownViewDelegate>
+
+@property (nonatomic, weak) IBOutlet SFCountdownView *theFinalCountdown;
 
 @end

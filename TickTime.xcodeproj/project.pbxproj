@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA04E5101B40D9660051D441 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = DA04E50F1B40D9660051D441 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
+		DA6057561B6478D900E87928 /* SFCountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6057551B6478D900E87928 /* SFCountdownView.m */; };
 		DA8C0C271AF6A1EC004B61F5 /* TTInstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C0C261AF6A1EC004B61F5 /* TTInstructionsViewController.m */; };
 		DA8C0C2C1AF6AB31004B61F5 /* TTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C0C2B1AF6AB31004B61F5 /* TTSettingsViewController.m */; };
 		DA8C0C2F1AF6AF96004B61F5 /* TTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C0C2E1AF6AF96004B61F5 /* TTBaseViewController.m */; };
@@ -25,8 +26,8 @@
 		DAB3D81C1AEDB820003DA43A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB3D81A1AEDB820003DA43A /* LaunchScreen.xib */; };
 		DAB3D8281AEDB820003DA43A /* TickTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8271AEDB820003DA43A /* TickTimeTests.m */; };
 		DAB3D8331AEDBBE9003DA43A /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB3D8321AEDBBE9003DA43A /* UIImage+animatedGIF.m */; };
-		DAB3D8351AEDBC14003DA43A /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = DAB3D8341AEDBC14003DA43A /* gif.gif */; };
 		DAC9EEBC1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC9EEBB1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m */; };
+		DAEBCDD81B63C57900199D84 /* tick.gif in Resources */ = {isa = PBXBuildFile; fileRef = DAEBCDD71B63C57900199D84 /* tick.gif */; };
 		DAF1AE5F1B3F9E290071F3C7 /* TTTimePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF1AE5E1B3F9E290071F3C7 /* TTTimePickerViewController.m */; };
 		DAF1AE661B3FA30D0071F3C7 /* TTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF1AE651B3FA30D0071F3C7 /* TTButton.m */; };
 		DAF1AE681B3FA5DF0071F3C7 /* Quicksand-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAF1AE671B3FA5DF0071F3C7 /* Quicksand-Light.otf */; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		DA04E50E1B40D9660051D441 /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
 		DA04E50F1B40D9660051D441 /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
+		DA6057541B6478D900E87928 /* SFCountdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFCountdownView.h; sourceTree = "<group>"; };
+		DA6057551B6478D900E87928 /* SFCountdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFCountdownView.m; sourceTree = "<group>"; };
 		DA8C0C251AF6A1EC004B61F5 /* TTInstructionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTInstructionsViewController.h; sourceTree = "<group>"; };
 		DA8C0C261AF6A1EC004B61F5 /* TTInstructionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTInstructionsViewController.m; sourceTree = "<group>"; };
 		DA8C0C2A1AF6AB31004B61F5 /* TTSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSettingsViewController.h; sourceTree = "<group>"; };
@@ -84,9 +87,9 @@
 		DAB3D8271AEDB820003DA43A /* TickTimeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TickTimeTests.m; sourceTree = "<group>"; };
 		DAB3D8311AEDBBE9003DA43A /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		DAB3D8321AEDBBE9003DA43A /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
-		DAB3D8341AEDBC14003DA43A /* gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif.gif; sourceTree = "<group>"; };
 		DAC9EEBA1B01A6D400E3B730 /* TTBaseMenuBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBaseMenuBackgroundView.h; sourceTree = "<group>"; };
 		DAC9EEBB1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseMenuBackgroundView.m; sourceTree = "<group>"; };
+		DAEBCDD71B63C57900199D84 /* tick.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tick.gif; sourceTree = "<group>"; };
 		DAF1AE5D1B3F9E290071F3C7 /* TTTimePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTimePickerViewController.h; sourceTree = "<group>"; };
 		DAF1AE5E1B3F9E290071F3C7 /* TTTimePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTimePickerViewController.m; sourceTree = "<group>"; };
 		DAF1AE641B3FA30D0071F3C7 /* TTButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTButton.h; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 		DAAF532A1AF846FC0041673F /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				DA6057541B6478D900E87928 /* SFCountdownView.h */,
+				DA6057551B6478D900E87928 /* SFCountdownView.m */,
 				DAAF53311AF857440041673F /* MZTimerLabel.h */,
 				DAAF53321AF857440041673F /* MZTimerLabel.m */,
 				DAAF532B1AF847060041673F /* LLSimpleCamera.h */,
@@ -208,7 +213,7 @@
 				DAAF532A1AF846FC0041673F /* Third Party */,
 				DA8C0C291AF6AB1D004B61F5 /* Categories */,
 				DA8C0C281AF6AB14004B61F5 /* View Controllers */,
-				DAB3D8341AEDBC14003DA43A /* gif.gif */,
+				DAEBCDD71B63C57900199D84 /* tick.gif */,
 				DAB3D80F1AEDB820003DA43A /* AppDelegate.h */,
 				DAB3D8101AEDB820003DA43A /* AppDelegate.m */,
 				DAB3D8151AEDB820003DA43A /* Main.storyboard */,
@@ -329,7 +334,7 @@
 			files = (
 				DAF1AE6A1B3FAEBB0071F3C7 /* Quicksand-Bold.otf in Resources */,
 				DAB3D8171AEDB820003DA43A /* Main.storyboard in Resources */,
-				DAB3D8351AEDBC14003DA43A /* gif.gif in Resources */,
+				DAEBCDD81B63C57900199D84 /* tick.gif in Resources */,
 				DAB3D81C1AEDB820003DA43A /* LaunchScreen.xib in Resources */,
 				DAB3D8191AEDB820003DA43A /* Images.xcassets in Resources */,
 				DAF1AE681B3FA5DF0071F3C7 /* Quicksand-Light.otf in Resources */,
@@ -357,6 +362,7 @@
 				DAAF53291AF846F20041673F /* UIImage+FixOrientation.m in Sources */,
 				DAB3D8141AEDB820003DA43A /* TTLandingViewController.m in Sources */,
 				DAB3D8331AEDBBE9003DA43A /* UIImage+animatedGIF.m in Sources */,
+				DA6057561B6478D900E87928 /* SFCountdownView.m in Sources */,
 				DAC9EEBC1B01A6D400E3B730 /* TTBaseMenuBackgroundView.m in Sources */,
 				DAAF53301AF847320041673F /* TTTickCheckViewController.m in Sources */,
 				DAF1AE661B3FA30D0071F3C7 /* TTButton.m in Sources */,

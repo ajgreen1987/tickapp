@@ -8,9 +8,11 @@
 
 #import "AppDelegate.h"
 
-#define FACEBOOK @"FB"
-#define TWITTER @"Twitter"
-#define SONG    @"URL"
+#define FACEBOOK        @"FB"
+#define TWITTER         @"Twitter"
+#define SONG            @"URL"
+#define TIMER           @"Timer"
+#define NOTIFICATION    @"Notify"
 
 @interface AppDelegate ()
 
@@ -21,10 +23,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+    }
+    
     // Hide Status Bar
     [application setStatusBarHidden:YES];
     
     [self setCountdownTimer:60];
+
     [[UISegmentedControl appearance] setTitleTextAttributes:@{NSFontAttributeName:[AppDelegate systemFontOfSize:12.0f]}
                                                    forState:UIControlStateNormal];
     
@@ -84,6 +91,31 @@
     return [NSURL URLWithString:[AppDelegate readStringForKey:SONG]];
 }
 
+- (void) setCountdownTimer:(NSInteger)countdownTimer
+{
+    [AppDelegate writeInteger:countdownTimer forKey:TIMER];
+}
+
+- (NSInteger) countdownTimer
+{
+    NSInteger toReturn = [AppDelegate readIntegerForKey:TIMER];
+    
+    return toReturn;
+}
+
+- (void) setNotificationDate:(NSDate *)notificationDate
+{
+    [AppDelegate writeObject:notificationDate
+                      forKey:NOTIFICATION];
+}
+
+- (NSDate*) notificationDate
+{
+    NSDate *toReturn = [AppDelegate readObjectForKey:NOTIFICATION];
+    
+    return toReturn;
+}
+
 
 #pragma mark - Font Helpers
 
@@ -101,6 +133,8 @@
     }
 }
 
+#pragma mark - NSUserDefaults
+
 + (void) writeBool:(BOOL)aBooleanValue forKey:(NSString*)aKey
 {
     [[NSUserDefaults standardUserDefaults] setBool:aBooleanValue
@@ -113,6 +147,17 @@
                                              forKey:aKey];
 }
 
++ (void) writeInteger:(NSInteger)anInteger forKey:(NSString *)aKey
+{
+    [[NSUserDefaults standardUserDefaults] setInteger:anInteger forKey:aKey];
+}
+
++ (void) writeObject:(id)object forKey:(NSString*)aKey
+{
+    [[NSUserDefaults standardUserDefaults] setObject:object
+                                              forKey:aKey];
+}
+
 + (BOOL) readBoolForKey:(NSString*)aKey
 {
     return [[NSUserDefaults standardUserDefaults] boolForKey:aKey];
@@ -121,6 +166,16 @@
 + (NSString*) readStringForKey:(NSString*)aKey
 {
     return [[NSUserDefaults standardUserDefaults] valueForKey:aKey];
+}
+
++ (NSInteger) readIntegerForKey:(NSString *)aKey
+{
+    return [[NSUserDefaults standardUserDefaults] integerForKey:aKey];
+}
+
++ (id) readObjectForKey:(NSString*)aKey
+{
+    return [[NSUserDefaults standardUserDefaults] objectForKey:aKey];
 }
 
 @end

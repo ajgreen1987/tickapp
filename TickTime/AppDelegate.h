@@ -16,13 +16,18 @@
 @property (nonatomic, assign) BOOL shouldShowFacebook;
 @property (nonatomic, assign) BOOL shouldShowTwitter;
 @property (nonatomic, strong) NSURL *songURL;
+@property (nonatomic, strong) NSDate *notificationDate;
 
 + (UIFont*) systemFontOfSize:(CGFloat)aSize;
 + (void) openURL:(NSURL*)aURL;
 + (void) writeBool:(BOOL)aBooleanValue forKey:(NSString*)aKey;
 + (void) writeString:(NSString*)aStringValue forKey:(NSString*)aKey;
++ (void) writeInteger:(NSInteger)anInteger forKey:(NSString*)aKey;
++ (void) writeObject:(id)object forKey:(NSString*)aKey;
 + (BOOL) readBoolForKey:(NSString*)aKey;
 + (NSString*) readStringForKey:(NSString*)aKey;
++ (NSInteger) readIntegerForKey:(NSString*)aKey;
++ (id) readObjectForKey:(NSString*)aKey;
 
 @end
 
