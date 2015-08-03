@@ -10,7 +10,6 @@
     <customFonts key="customFonts">
         <mutableArray key="Quicksand-Light.otf">
             <string>Quicksand-Light</string>
-            <string>Quicksand-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -281,24 +280,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TyM-yW-dtL">
-                                <rect key="frame" x="16" y="28" width="288" height="1659"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyM-yW-dtL">
+                                <rect key="frame" x="16" y="107" width="288" height="540"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="540" id="QHs-LQ-2Oy"/>
+                                </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="INSTRUCTIONS">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
                                     <fragment>
                                         <string key="content">Use TickTime to check you and your family for ticks. TickTime reminds you to do a check, then uses your phone’s camera and light to help your inspection. It plays a song from your library,timed to allow you to do a comprehensive check after spending time outdoors in tick country.
 
@@ -416,13 +403,24 @@ The information published in and discovered through TickTime is for general and 
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYh-KX-X1p" customClass="TTLabel">
+                                <rect key="frame" x="16" y="41" width="191" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DeP-3p-rkf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hjw-V4-ibh" firstAttribute="top" secondItem="TyM-yW-dtL" secondAttribute="bottom" constant="103" id="0mY-Ut-M4v"/>
-                            <constraint firstItem="TyM-yW-dtL" firstAttribute="top" secondItem="ftI-hq-xLe" secondAttribute="bottom" constant="8" symbolic="YES" id="Hs9-NT-g9K"/>
-                            <constraint firstItem="TyM-yW-dtL" firstAttribute="leading" secondItem="Tq4-KO-2Nq" secondAttribute="leadingMargin" id="sDB-cj-Igv"/>
-                            <constraint firstItem="TyM-yW-dtL" firstAttribute="trailing" secondItem="Tq4-KO-2Nq" secondAttribute="trailingMargin" id="smL-jB-VtO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VYh-KX-X1p" secondAttribute="trailing" constant="97" id="Drx-2m-fME"/>
+                            <constraint firstItem="TyM-yW-dtL" firstAttribute="trailing" secondItem="Tq4-KO-2Nq" secondAttribute="trailingMargin" id="GHU-lw-Gy6"/>
+                            <constraint firstItem="VYh-KX-X1p" firstAttribute="top" secondItem="ftI-hq-xLe" secondAttribute="bottom" constant="21" id="eRn-b5-WPp"/>
+                            <constraint firstItem="VYh-KX-X1p" firstAttribute="leading" secondItem="Tq4-KO-2Nq" secondAttribute="leadingMargin" id="fIu-Hz-aOA"/>
+                            <constraint firstItem="TyM-yW-dtL" firstAttribute="top" secondItem="VYh-KX-X1p" secondAttribute="bottom" constant="26" id="pbl-Ee-9eZ"/>
+                            <constraint firstItem="VYh-KX-X1p" firstAttribute="leading" secondItem="TyM-yW-dtL" secondAttribute="leading" id="z7J-lY-CJV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c5G-MN-MvQ"/>
