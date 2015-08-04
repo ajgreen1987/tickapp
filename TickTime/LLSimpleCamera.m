@@ -119,11 +119,18 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
                                                  code:LLSimpleCameraErrorCodePermission
                                              userInfo:nil];
                 
-                if(self.onError) {
+
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        self.onError(self, error);
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Camera Permissions"
+                                                                        message:@"Please check your Camera permissions within the iOS Settings application and allow this app permission to access your camera."
+                                                                       delegate:nil
+                                                              cancelButtonTitle:@"OK"
+                                                              otherButtonTitles:nil];
+                        [alert show];
+                        
+                        [[self navigationController] popToRootViewControllerAnimated:YES];
                     });
-                }
+
             }
         }];
     } else {
