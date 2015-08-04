@@ -35,6 +35,8 @@
     [[UISegmentedControl appearance] setTitleTextAttributes:@{NSFontAttributeName:[AppDelegate systemFontOfSize:12.0f]}
                                                    forState:UIControlStateNormal];
     
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    
     return YES;
 }
 
