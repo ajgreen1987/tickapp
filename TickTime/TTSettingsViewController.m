@@ -71,6 +71,7 @@
     notification.timeZone = [NSTimeZone defaultTimeZone];
     notification.soundName = UILocalNotificationDefaultSoundName;
     notification.applicationIconBadgeNumber = 1;
+    notification.repeatInterval = kCFCalendarUnitDay;
     
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
