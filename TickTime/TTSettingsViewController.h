@@ -19,12 +19,14 @@
 @property (weak, nonatomic) IBOutlet UISwitch *music;
 @property (weak, nonatomic) IBOutlet UISlider *timer;
 @property (weak, nonatomic) IBOutlet UIButton *timePicker;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *reminder;
 
 - (IBAction)handleTimeTouchUpInside:(id)sender;
 - (IBAction)handleCountdownTimerValueChanged:(id)sender;
 - (IBAction)handleMusicSwitchValueChanged:(id)sender;
 - (IBAction)handleTwitterSwitchValueChanged:(id)sender;
 - (IBAction)handleFacebookSwitchValueChanged:(id)sender;
+- (IBAction)handleReminderSegmentSegmentChanged:(id)sender;
 
 
 @end

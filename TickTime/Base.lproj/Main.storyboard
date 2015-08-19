@@ -289,114 +289,23 @@
                                     <fragment>
                                         <string key="content">Use TickTime to check you and your family for ticks. TickTime reminds you to do a check, then uses your phone’s camera and light to help your inspection. It plays a song from your library,timed to allow you to do a comprehensive check after spending time outdoors in tick country.
 
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Do a Check: ">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">When you tap “Do a Check,” TickTime activates the camera interface and the light, cues up your song, and displays the timer. Tap the shutter button to begin and start searching. (To learn the best way to check for ticks, visit the CDC web page under “Tick Resources.”)
+Do a Check: When you tap “Do a Check,” TickTime activates the camera interface and the light, cues up your song, and displays the timer. Tap the shutter button to begin and start searching. (To learn the best way to check for ticks, visit the CDC web page under “Tick Resources.”)
 
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="During a check:">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> If you find something, tap the shutter button to capture an image in your gallery (the timer will pause, then resume). Go to “Tick Resources” for advice on removing ticks you find. (If you find one, don’t forget to complete your check after dealing with it.)
+During a check: If you find something, tap the shutter button to capture an image in your gallery (the timer will pause, then resume). Go to “Tick Resources” for advice on removing ticks you find. (If you find one, don’t forget to complete your check after dealing with it.)
 
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="After a check: ">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Tap “Save” when you’re finished checking. Depending on your settings (see below), you will be prompted to remind social media friends to do their own tick checks. Hit “Send” or “Cancel” for each social platform. 
+After a check: Tap “Save” when you’re finished checking. Depending on your settings (see below), you will be prompted to remind social media friends to do their own tick checks. Hit “Send” or “Cancel” for each social platform. 
 
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Settings: ">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Choose how TickTime works for you. Tap “Settings” to set the timer duration, set the time of day and frequency of reminders, choose your song (if you’ll be checking your kids, pick a song they love), and set social media preferences.
+Settings: Choose how TickTime works for you. Tap “Settings” to set the timer duration, set the time of day and frequency of reminders, choose your song (if you’ll be checking your kids, pick a song they love), and set social media preferences.
 
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Tick Resources: ">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Tap this button to learn more about avoiding ticks, what to do if you find one, the kinds of ticks you might encounter, and the potential risk they may pose. We provide links to expert sources at the CDC and elsewhere, but please see the disclaimer below. You can also shop here for repellent, removal tweezers and other products.
+Tick Resources: Tap this button to learn more about avoiding ticks, what to do if you find one, the kinds of ticks you might encounter, and the potential risk they may pose. We provide links to expert sources at the CDC and elsewhere, but please see the disclaimer below. You can also shop here for repellent, removal tweezers and other products.
 
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Your Images: ">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">When you do a check, you can snap a picture of anything you find and save it to a gallery. Tap “Your Images” to review.
+Your Images: When you do a check, you can snap a picture of anything you find and save it to a gallery. Tap “Your Images” to review.
 
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="DISCLAIMER">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
+DISCLAIMER
 
 The information published in and discovered through TickTime is for general and educational purposes only. This application and instructions are in no way meant to be a substitute for medical treatment and may not be construed as medical advice, diagnosis or treatment. No action or inaction should be taken based solely on the information provided in the application. Users should consult with appropriate health professionals on any matter relating to their health and well ­being.</string>
                                         <attributes>
-                                            <font key="NSFont" size="17" name="Quicksand-Light"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -616,6 +525,9 @@ The information published in and discovered through TickTime is for general and 
                                     <segment title="Weekends"/>
                                 </segments>
                                 <color key="tintColor" red="0.96862745100000003" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="handleReminderSegmentSegmentChanged:" destination="KYb-VR-PhM" eventType="valueChanged" id="jJo-sl-i02"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdn-WB-DGz">
                                 <rect key="frame" x="215" y="404" width="89" height="41"/>
@@ -705,6 +617,7 @@ The information published in and discovered through TickTime is for general and 
                     <connections>
                         <outlet property="facebook" destination="XUF-mr-ncB" id="VN3-Dh-57C"/>
                         <outlet property="music" destination="zHr-Mw-EX4" id="Xp1-cM-Bcx"/>
+                        <outlet property="reminder" destination="QjM-Rd-wgz" id="CQY-Ab-VYf"/>
                         <outlet property="timePicker" destination="Jdn-WB-DGz" id="yZ7-lS-5wE"/>
                         <outlet property="timer" destination="ufk-Ct-2j8" id="KsO-D0-SNU"/>
                         <outlet property="twitter" destination="wZS-sk-Cmt" id="geV-Wn-2dE"/>

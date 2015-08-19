@@ -17,7 +17,9 @@
 @property (nonatomic, assign) BOOL shouldShowTwitter;
 @property (nonatomic, strong) NSURL *songURL;
 @property (nonatomic, strong) NSDate *notificationDate;
+@property (nonatomic, assign) NSInteger reminderIndex;
 
++ (NSInteger) reminderIntervalForIndex:(NSInteger)anIndex;
 + (UIFont*) systemFontOfSize:(CGFloat)aSize;
 + (void) openURL:(NSURL*)aURL;
 + (void) writeBool:(BOOL)aBooleanValue forKey:(NSString*)aKey;

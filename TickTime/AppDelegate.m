@@ -13,6 +13,7 @@
 #define SONG            @"URL"
 #define TIMER           @"Timer"
 #define NOTIFICATION    @"Notify"
+#define REMINDER_INDEX  @"Reminder"
 
 @interface AppDelegate ()
 
@@ -118,6 +119,18 @@
     return toReturn;
 }
 
+- (void) setReminderIndex:(NSInteger)reminderIndex
+{
+    [AppDelegate writeInteger:reminderIndex forKey:REMINDER_INDEX];
+}
+
+- (NSInteger) reminderIndex
+{
+    NSInteger toReturn = [AppDelegate readIntegerForKey:REMINDER_INDEX];
+    
+    return toReturn;
+}
+
 
 #pragma mark - Font Helpers
 
@@ -178,6 +191,19 @@
 + (id) readObjectForKey:(NSString*)aKey
 {
     return [[NSUserDefaults standardUserDefaults] objectForKey:aKey];
+}
+
++ (NSInteger) reminderIntervalForIndex:(NSInteger)anIndex
+{
+    switch (anIndex)
+    {
+        case 1:
+            return kCFCalendarUnitDay;
+        case 2:
+            return kCFCalendarUnitWeekday;
+        default:
+            return (kCFCalendarUnitWeek - kCFCalendarUnitWeekday);
+    }
 }
 
 @end

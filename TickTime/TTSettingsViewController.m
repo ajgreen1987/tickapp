@@ -34,6 +34,7 @@
     [self.facebook setOn:[appDelegate shouldShowFacebook]];
     [self.twitter setOn:[appDelegate shouldShowTwitter]];
     [self.music setOn:([appDelegate songURL] != nil)];
+    [self.reminder setSelectedSegmentIndex:[appDelegate reminderIndex]];
     
     NSString *time = [self formattedDate:appDelegate.notificationDate];
     
@@ -128,6 +129,12 @@
     
     AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     [appDelegate setShouldShowFacebook:isOn];
+}
+
+- (IBAction)handleReminderSegmentSegmentChanged:(id)sender
+{
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appDelegate setReminderIndex:self.reminder.selectedSegmentIndex];
 }
 
 - (void) mediaPicker: (MPMediaPickerController *) mediaPicker didPickMediaItems: (MPMediaItemCollection *) mediaItemCollection
