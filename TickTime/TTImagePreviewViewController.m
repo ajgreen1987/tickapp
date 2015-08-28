@@ -25,7 +25,14 @@
 
 - (void) viewDidAppear:(BOOL)animated
 {
-    [[self imageView] setImage:self.imageToDisplay];
+    if (self.imageView.image == nil)
+    {
+        [self handleSaveTouchUpInside:nil];
+    }
+    else
+    {
+        [[self imageView] setImage:self.imageToDisplay];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,7 +60,7 @@
     // Show share sheet
     NSString *texttoshare = @"Just completed a TickTime check!";
     UIImage *imagetoshare = self.imageToDisplay;
-    NSArray *activityItems = @[texttoshare, imagetoshare];
+    NSArray *activityItems = (imagetoshare == nil) ? @[texttoshare] : @[texttoshare, imagetoshare];
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     
     NSMutableArray *excluded = [[NSMutableArray alloc] initWithObjects:UIActivityTypeAssignToContact, UIActivityTypePrint, UIActivityTypePostToFlickr, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypeMail, UIActivityTypeMessage,UIActivityTypePostToFlickr, UIActivityTypePostToTencentWeibo, UIActivityTypePostToVimeo, UIActivityTypePostToWeibo, UIActivityTypePrint, nil];

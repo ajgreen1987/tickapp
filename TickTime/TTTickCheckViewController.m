@@ -109,31 +109,38 @@
 
 - (void)snapButtonPressed:(UIButton *)button
 {
-    __block TTTickCheckViewController *blockSafeSelf = self;
-    
-    // capture
-    [self capture:^(LLSimpleCamera *camera, UIImage *image, NSDictionary *metadata, NSError *error) {
-        if(!error) {
-            
-            // we should stop the camera, since we don't need it anymore. We will open a new vc.
-            // this very important, otherwise you may experience memory crashes
-            [camera stop];
-            
-            // show the image
-            [blockSafeSelf setCapturedImage:image];
-            [blockSafeSelf stopMusic];
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [blockSafeSelf pushPreview];
-            });
-            
-            
-        }
-        else
-        {
-            NSLog(@"An error has occured: %@", error);
-        }
-    } exactSeenImage:YES];
+    if (!(button == nil))
+    {
+        __block TTTickCheckViewController *blockSafeSelf = self;
+        
+        // capture
+        [self capture:^(LLSimpleCamera *camera, UIImage *image, NSDictionary *metadata, NSError *error) {
+            if(!error) {
+                
+                // we should stop the camera, since we don't need it anymore. We will open a new vc.
+                // this very important, otherwise you may experience memory crashes
+                [camera stop];
+                
+                // show the image
+                [blockSafeSelf setCapturedImage:image];
+                [blockSafeSelf stopMusic];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [blockSafeSelf pushPreview];
+                });
+                
+                
+            }
+            else
+            {
+                NSLog(@"An error has occured: %@", error);
+            }
+        } exactSeenImage:YES];
+    }
+    else
+    {
+        [self pushPreview];
+    }
 }
 
 - (void) cancelTouched:(UIButton*) button

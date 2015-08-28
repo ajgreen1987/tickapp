@@ -11,4 +11,6 @@
 
 @interface TTInstructionsViewController : TTBaseViewController
 
+@property (nonatomic, weak) IBOutlet UITextView *instructions;
+
 @end
