@@ -60,7 +60,7 @@
     // Show share sheet
     NSString *texttoshare = @"Just completed a TickTime check!";
     UIImage *imagetoshare = self.imageToDisplay;
-    NSArray *activityItems = (imagetoshare == nil) ? @[texttoshare] : @[texttoshare, imagetoshare];
+    NSArray *activityItems = (imagetoshare == nil) ? @[self,texttoshare] : @[self,texttoshare, imagetoshare];
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     
     NSMutableArray *excluded = [[NSMutableArray alloc] initWithObjects:UIActivityTypeAssignToContact, UIActivityTypePrint, UIActivityTypePostToFlickr, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypeMail, UIActivityTypeMessage,UIActivityTypePostToFlickr, UIActivityTypePostToTencentWeibo, UIActivityTypePostToVimeo, UIActivityTypePostToWeibo, UIActivityTypePrint, nil];
@@ -104,7 +104,7 @@
 {
     if ([activityType isEqualToString:UIActivityTypePostToFacebook])
     {
-        return @"I just completed a #TickCheck with @TickTimeApp! Download TickTime: bit.ly/adfjh3fhg";
+        return @"I just did a #TickCheck with @TickTimeApp! Download TickTime: bit.ly/adfjh3fhg”;
     }
     else if ([activityType isEqualToString:UIActivityTypePostToTwitter])
     {

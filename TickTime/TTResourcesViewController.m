@@ -27,7 +27,7 @@
 
 - (IBAction)handleCDCTouchUpInside:(id)sender
 {
-    [AppDelegate openURL:[NSURL URLWithString:@"http://www.cdc.gov/ticks/removing_a_tick.html"]];
+    [AppDelegate openURL:[NSURL URLWithString:@"http://www.cdc.gov/ticks"]];
 }
 
 - (IBAction)handleTickProductsTouchUpInside:(id)sender

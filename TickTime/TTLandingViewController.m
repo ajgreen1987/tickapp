@@ -201,8 +201,21 @@
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     [imagePicker.view setFrame:self.view.bounds];
     [imagePicker setSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+    [imagePicker setDelegate:self];
     
     [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIViewController *controller = [[UIViewController alloc] init];
+
+    UIImage *selectedImage = (UIImage*) [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:selectedImage];
+    
+    [[controller view] addSubview:imageView];
+    
+    [picker pushViewController:controller animated:YES];
 }
 
 @end

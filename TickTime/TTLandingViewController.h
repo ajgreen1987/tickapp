@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TTLandingViewController : UIViewController
+@interface TTLandingViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *animatedBackground;
 @property (weak, nonatomic) IBOutlet UIButton *doACheck;
