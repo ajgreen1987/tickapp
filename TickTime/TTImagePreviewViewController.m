@@ -104,11 +104,11 @@
 {
     if ([activityType isEqualToString:UIActivityTypePostToFacebook])
     {
-        return @"I just did a #TickCheck with @TickTimeApp! Download TickTime: bit.ly/adfjh3fhg”;
+        return @"I just did a #TickCheck with @TickTimeApp! Download TickTime: bit.ly/adfjh3fhg”";
     }
     else if ([activityType isEqualToString:UIActivityTypePostToTwitter])
     {
-        return @"I just completed a #TickCheck with @TickTimeApp! Download TickTime: bit.ly/adfjh3fhg";
+        return @"I just did a #TickCheck with @TickTime! Download TickTime: bit.ly/adfjh3fhg";
     }
     else {
         return nil;
