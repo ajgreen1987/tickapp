@@ -133,8 +133,15 @@
 
 - (IBAction)handleReminderSegmentSegmentChanged:(id)sender
 {
-    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    [appDelegate setReminderIndex:self.reminder.selectedSegmentIndex];
+    if (self.reminder.selectedSegmentIndex == 0)
+    {
+        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    }
+    else
+    {
+        AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+        [appDelegate setReminderIndex:self.reminder.selectedSegmentIndex];
+    }
 }
 
 - (void) mediaPicker: (MPMediaPickerController *) mediaPicker didPickMediaItems: (MPMediaItemCollection *) mediaItemCollection
