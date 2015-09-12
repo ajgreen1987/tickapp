@@ -25,9 +25,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)handleCDCTouchUpInside:(id)sender
+- (IBAction)handleRemovalTouchUpInside:(id)sender
 {
-    [AppDelegate openURL:[NSURL URLWithString:@"http://www.cdc.gov/ticks"]];
+    [AppDelegate openURL:[NSURL URLWithString:@"http://www.cdc.gov/ticks/removing_a_tick.html"]];
 }
 
 - (IBAction)handleTickProductsTouchUpInside:(id)sender
@@ -37,7 +37,7 @@
 
 - (IBAction)handleTickFactsTouchUpInside:(id)sender
 {
-    [AppDelegate openURL:[NSURL URLWithString:@"http://www.tickencounter.org"]];
+    [AppDelegate openURL:[NSURL URLWithString:@"http://www.cdc.gov/ticks/"]];
 }
 
 @end
