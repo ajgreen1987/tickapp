@@ -58,7 +58,7 @@
 - (IBAction)handleSaveTouchUpInside:(id)sender
 {
     // Show share sheet
-    NSString *texttoshare = @"Just completed a TickTime check!";
+    NSString *texttoshare = @"";
     UIImage *imagetoshare = self.imageToDisplay;
     NSArray *activityItems = (imagetoshare == nil) ? @[self,texttoshare] : @[self,texttoshare, imagetoshare];
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
@@ -104,11 +104,11 @@
 {
     if ([activityType isEqualToString:UIActivityTypePostToFacebook])
     {
-        return @"I just did a #TickCheck with @TickTimeApp! Download TickTime: bit.ly/adfjh3fhg”";
+        return @"I just did a #TickCheck with @TickTimeApp!";
     }
     else if ([activityType isEqualToString:UIActivityTypePostToTwitter])
     {
-        return @"I just did a #TickCheck with @TickTime! Download TickTime: bit.ly/adfjh3fhg";
+        return @"I just did a #TickCheck with @TickTime!";
     }
     else {
         return nil;
