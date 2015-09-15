@@ -10,7 +10,7 @@
 
 @interface TTResourcesViewController : TTBaseViewController
 
-- (IBAction)handleCDCTouchUpInside:(id)sender;
+- (IBAction)handleRemovalTouchUpInside:(id)sender;
 - (IBAction)handleTickProductsTouchUpInside:(id)sender;
 - (IBAction)handleTickFactsTouchUpInside:(id)sender;
 
