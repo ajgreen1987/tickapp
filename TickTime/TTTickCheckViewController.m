@@ -38,7 +38,7 @@
     [[self view] addSubview:[self cancelButton]];
     [self setupTimerLabel];
     
-    [self turnOnTorch];
+    [self toggleTorchOn:YES];
     [self playMusic];
 }
 
@@ -58,12 +58,12 @@
     [self.player pause];
 }
 
-- (void) turnOnTorch
+- (void) toggleTorchOn:(BOOL)isOn
 {
     if ([self.captureDevice hasTorch])
     {
         [self.captureDevice lockForConfiguration:nil];
-        [self.captureDevice setTorchMode:AVCaptureTorchModeOn];  // use AVCaptureTorchModeOff to turn off
+        [self.captureDevice setTorchMode:isOn ? AVCaptureTorchModeOn:AVCaptureTorchModeOff];  // use AVCaptureTorchModeOff to turn off
         [self.captureDevice unlockForConfiguration];
     }
 }
@@ -139,7 +139,9 @@
     }
     else
     {
-        [self pushPreview];
+        [self stopMusic];
+        [self toggleTorchOn:NO];
+        [[self navigationController] popToRootViewControllerAnimated:YES];
     }
 }
 
