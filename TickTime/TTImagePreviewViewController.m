@@ -104,11 +104,11 @@
 {
     if ([activityType isEqualToString:UIActivityTypePostToFacebook])
     {
-        return @"I just did a #TickCheck with @TickTimeApp!";
+        return @"I just did a #TickCheck with @TickTimeApp! https://itunes.apple.com/bj/app/ticktime/id1042503765";
     }
     else if ([activityType isEqualToString:UIActivityTypePostToTwitter])
     {
-        return @"I just did a #TickCheck with @TickTime!";
+        return @"I just did a #TickCheck with @TickTime! https://itunes.apple.com/bj/app/ticktime/id1042503765";
     }
     else {
         return nil;
