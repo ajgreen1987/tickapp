@@ -212,6 +212,7 @@
 
     UIImage *selectedImage = (UIImage*) [info objectForKey:UIImagePickerControllerOriginalImage];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:selectedImage];
+    [imageView setFrame:self.view.frame];
     
     [[controller view] addSubview:imageView];
     
