@@ -37,6 +37,7 @@
                                                    forState:UIControlStateNormal];
     
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
     
     return YES;
 }
